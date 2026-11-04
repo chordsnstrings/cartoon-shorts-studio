@@ -29,43 +29,19 @@ Skill beat formula: hook (absurd fact, 1 line) → setting → 3-4 escalating be
 Jokes are researched facts. English only. Never describe what the viewer already sees. Brand/company names may be
 said in narration if factual; they never appear on screen and never in the caption.
 
-## 3. Voice — ElevenLabs with emotion
-`pipeline/voice/eleven_voice.py lines.json <voice_id> voice/` → voice.wav + words.json (exact word times).
-- eleven_v3; one voice for the whole short (default narrator: pick a warm male/female storyteller from GET /voices
-  and record the id in `published.md` so the channel keeps one voice). Emotion via tags per line:
-  `[excited]` hook, `[curious]` setup, `[deadpan]` jokes/"Luckily", `[whispers]`/`[sighs]` for asides, `[laughs]` sparingly.
-- Cross-check: run `pipeline/voice/align.py voice/voice.wav /tmp/w.json` (faster-whisper) — every word must match.
-- Total length 55-70 s; adjust pauses/lines, not speed.
-
-## 4. Picture — studio/ (Remotion + three.js)
-- Copy `studio/src/videos/hotpot/` to `studio/src/videos/<slug>/`, register `<Slug>Short` in `src/Root.tsx`.
-  Reuse as-is: ink.ts, lensblur.ts, grade.ts, shade.ts, cardshade.ts, lights.ts (day/golden/indoor), paint.ts,
-  toon.ts (Pen, bodyFront with `reach` arms and "phone" prop), Short.tsx, cast.ts core (Pool/Actor/Fx/person/blob).
-  Rewrite per story: story.ts (timings from words.json, SHOTS, CAMS, KICKS, DOF), build.ts (places), world.ts
-  dynamics, cast.ts stage(), robot.ts-style custom drawings.
-- ModelArk when it helps (bills — use for real needs): Seedream plates for painted textures/skies, Hyper3D/Hitem3d hero
-  props (inspect, decimate ≤50k faces, recolour). Characters always drawn in toon.ts. Never Seedance in the final picture.
-- Stills: `ENTRY=src/index.ts node scripts/stills.mjs out/<slug>/r1_ <frames> 0.5` (~25 s/still, software GL).
-  Contact sheet: `python3 scripts/sheet.py out.jpg <stills...>`.
-- Opus verify (max effort) on sheets + 2 reference frames from ~/ref/references/frames: scores + numbered fixes.
-  Do 2 rounds; fix the top items each round.
-
-## 5. Sound
-- Music: ElevenLabs `pipeline/audio/eleven_music.py plan.json audio/music.wav` — composition plan with sections on
-  the shot beats (hook / build / snap / explanation / twist), instrumental, exact length = TOTAL/30 s.
-  The music should stop dead on the final punchline beat if the story allows (it worked well).
-- SFX: synthesized (`sfx_gen.py` + the event table in `pipeline/audio/mix.py` — rewrite the event table per story;
-  `timeline.py` mirrors story.ts). ElevenLabs `/sound-generation` only for sounds the synth can't make.
-- Mix: `MUSIC_WAV=audio/music.wav python3 pipeline/audio/mix.py` → music +3 dB, SFX −6 dB, voice unchanged, −15 LUFS.
-
-## 6. Final render (~4-5 h on the cloud CPU — start it as early as possible)
-- `--scale 1.3333333333333333` (exactly; 1.3333 gives a non-integer height), `--timeout=300000`,
-  `--props='{"post":{"msaa":0}}'`, `--gl swangle`, concurrency 1, `--jpeg-quality 95`.
-- Render in 4 resumable chunks in a nohup background script (see `studio/scripts/final.sh`); poll every ~10 min and
-  keep the session busy until it finishes. If the box restarts, re-run the script (done chunks are skipped).
-- Concat (`ffmpeg -f concat -c copy`), mux with the mix (`-map 0:v:0 -map 1:a:0`).
-- QA: `python3 studio/scripts/short_qa.py final.mp4 qa shots.json`; then a fresh Opus (max) audit of the QA sheets.
-  Fix real defects by re-rendering frame ranges as PNG (`--sequence`) and re-encoding (crf 16) — see NOTES_hotpot.md.
+## 3-6. Voice, music, picture, render, Opus checks — follow the `cartoon-3d-short` skill
+The skill is the source of truth for these steps (ElevenLabs voice with emotion + music, ModelArk assets, look values,
+stills, Opus max verification rounds, 2K final render, QA, final Opus audit). Do not duplicate or override it here.
+Repo-specific helpers for those steps:
+- `pipeline/voice/eleven_voice.py lines.json <voice_id> voice/` → voice.wav + exact words.json (eleven_v3, tags per line);
+  keep one voice id for the channel (record it in `published.md`). Cross-check with `pipeline/voice/align.py`.
+- `pipeline/audio/eleven_music.py plan.json audio/music.wav` (exact length, beat-locked sections), then
+  `MUSIC_WAV=audio/music.wav python3 pipeline/audio/mix.py` (rewrite its SFX event table + `timeline.py` per story).
+- Picture: copy `studio/src/videos/hotpot/` → `studio/src/videos/<slug>/` as the starting template (reusable post chain,
+  toon.ts with `reach` arms / phone prop, cast core, lights incl. `indoor`); stills via `studio/scripts/stills.mjs`,
+  sheets via `studio/scripts/sheet.py`, chunked final via `studio/scripts/final.sh` (resumable; poll ~10 min).
+- Cloud render specifics: `--scale 1.3333333333333333`, `--timeout=300000`, `--gl swangle`, `--props='{"post":{"msaa":0}}'`,
+  concurrency 1; ~4-5 h at 2K. Fix audit defects by re-rendering frame ranges as PNG and re-encoding (crf 16).
 
 ## 7. TikTok (Higgsfield connector; account already connected)
 - TikTok file: 1080x1920, 30 fps, H.264 high crf 17, AAC 192k, faststart. Cover = the impact/payoff frame.
