@@ -1,0 +1,12 @@
+{"length_s": 69.0, "model_id": "music_v1",
+ "global": ["instrumental", "playful cartoon score", "whimsical space adventure", "light orchestral with soft synth arps", "no vocals"],
+ "sections": [
+  {"name": "hook", "s": 0, "e": 6.3, "style": "twinkly mysterious space synth arpeggio, celesta, cheeky pizzicato hint, light"},
+  {"name": "launch", "s": 6.3, "e": 16.05, "style": "bouncy building orchestral pizzicato and snare roll, rising excitement, brass swell at 3.7 seconds in"},
+  {"name": "lab", "s": 16.05, "e": 23.85, "style": "comedic tension, ticking clock percussion, low strings staccato, quirky bassoon"},
+  {"name": "waiting", "s": 23.85, "e": 34.15, "style": "curious light suspense, soft marimba ostinato, gentle synth pad, anticipation"},
+  {"name": "haiku", "s": 34.15, "e": 43.9, "style": "magical wonder, music box and warm strings, airy choir pad without words, slow and soft"},
+  {"name": "deadpan", "s": 43.9, "e": 50.35, "style": "sparse comic pizzicato, deadpan tuba plunks, quiet"},
+  {"name": "analogy", "s": 50.35, "e": 58.9, "style": "gentle warm ukulele and glockenspiel, sunny then sleepy, soft"},
+  {"name": "finale", "s": 58.9, "e": 69.0, "style": "upbeat bouncy playful finale, synth arps and pizzicato, ends on a comic button"}
+ ]}

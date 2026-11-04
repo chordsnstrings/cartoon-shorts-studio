@@ -39,7 +39,10 @@ Repo-specific helpers for those steps:
   `MUSIC_WAV=audio/music.wav python3 pipeline/audio/mix.py` (rewrite its SFX event table + `timeline.py` per story).
 - Picture: copy `studio/src/videos/hotpot/` → `studio/src/videos/<slug>/` as the starting template (reusable post chain,
   toon.ts with `reach` arms / phone prop, cast core, lights incl. `indoor`); stills via `studio/scripts/stills.mjs`,
-  sheets via `studio/scripts/sheet.py`, chunked final via `studio/scripts/final.sh` (resumable; poll ~10 min).
+  sheets via `studio/scripts/sheet.py`, chunked final via `studio/scripts/final.sh <Comp> <slug> <frames> [chunks] [jobs]`
+  (resumable; 6 chunks x 2 parallel browsers ~2 h at 2K; poll ~10 min).
+- Per-story files live in `pipeline/stories/<slug>/` (SCRIPT.md, lines.json, words.json, plan.json, mix_<slug>.py, NOTES.md).
+  `pipeline/stories/orbit/mix_orbit.py` is a self-contained mix template (SFX table + duck + limiter): copy it per story.
 - Cloud render specifics: `--scale 1.3333333333333333`, `--timeout=300000`, `--gl swangle`, `--props='{"post":{"msaa":0}}'`,
   concurrency 1; ~4-5 h at 2K. Fix audit defects by re-rendering frame ranges as PNG and re-encoding (crf 16).
 
@@ -54,6 +57,12 @@ Repo-specific helpers for those steps:
 - Push-notify the owner with: the video, the cover, the caption, and "open this session to publish" (aim ~7 pm Dubai).
 - Append the day to `published.md` (date, slug, category, story, sources, voice id, caption) and commit + push the
   repo (new story folder + any reusable improvements; never media, never keys).
+
+## Gotchas (from the orbit short)
+- ElevenLabs v3 leaves 1 s holes mid-sentence: `MAX_GAP` in eleven_voice.py squeezes them; `SPEED=1.08` keeps 55-70 s.
+- Music: composition plans only work on `music_v1`, and without `force_instrumental` (instrumental via negative styles).
+- Async textures (staticFile images) must load before the ThreeCanvas mounts, or held frames render without them.
+- Keep each exterior place's ground/mountains within +-195 m of its x offset (places are 400 m apart).
 
 ## Gotchas (from the first short)
 - Any character card near a camera path fills the frame (grey frames): check every camera against cast positions.

@@ -18,7 +18,8 @@ def main():
     plan, out = json.load(open(sys.argv[1])), sys.argv[2]
     L = plan["length_s"]
     if "sections" in plan:
-        body = {"model_id": plan.get("model_id", "music_v1"), "force_instrumental": True, "composition_plan": {
+        # (the API rejects force_instrumental together with a composition plan: instrumental = negative styles + no lines)
+        body = {"model_id": plan.get("model_id", "music_v1"), "composition_plan": {
             "positive_global_styles": plan.get("global", ["instrumental", "cartoon score"]), "negative_global_styles": ["vocals", "lyrics"],
             "sections": [{"section_name": s["name"], "positive_local_styles": [s["style"]], "negative_local_styles": [],
                           "duration_ms": max(3000, round((s["e"] - s["s"]) * 1000)), "lines": []} for s in plan["sections"]]}}
