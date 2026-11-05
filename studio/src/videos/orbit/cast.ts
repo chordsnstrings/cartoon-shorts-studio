@@ -302,12 +302,12 @@ const fxPuffBig = (p: Pen, seed: number) => {
 
 const clean = (cam: CamInfo, out: Stage, t: number) => {
   const S = satState(t);
-  satPlace(cam, out, [CLEAN, 0.56 + SAT_DY * 0.95, 0], 0.95, S, t, 3);
+  satPlace(cam, out, [CLEAN, 0.56 + (790 - 640) * SU * 0.95, 0], 0.95, S, t, 3); // thrusters (design y 790) rest on the turntable
   const lit = S.chips > 0;
   standing(cam, out, 40, TECH, CLEAN - 0.78, -0.45, { expr: lit ? "grin" : "smile", reach: [null, [445, 560]], look: 0.4 }, t);
   if (at(t, W.four) && t < W.four + 0.9) {
     const n = Math.min(4, S.chips);
-    for (let i = 0; i < n; i++) out.fx.push({ key: `cspk${i}|${Math.floor(t * 10) % 5}`, cw: 128, ch: 128, draw: (p) => fxSparkle(p, Math.floor(t * 10)), x: CLEAN - 0.18 + i * 0.11, y: 0.56 + SAT_DY * 0.95 - 0.16 + 0.12, z: 0.12, w: 0.1, h: 0.1 });
+    for (let i = 0; i < n; i++) out.fx.push({ key: `cspk${i}|${Math.floor(t * 10) % 5}`, cw: 128, ch: 128, draw: (p) => fxSparkle(p, Math.floor(t * 10)), x: CLEAN - 0.18 + i * 0.11, y: 0.56 + (790 - 640) * SU * 0.95 - 0.04 + (690 - 640) * -SU * 0.95, z: 0.12, w: 0.1, h: 0.1 });
   }
 };
 
