@@ -54,6 +54,8 @@ Repo-specific helpers for those steps:
   on, commercial off, AI-generated label on, no added music.
 - Caption rules (memory: tiktok-channel playbook): one punchy line ≤100 chars teasing the payoff + emoji pair, "real
   story" + month/year, no brand names; 4-6 hashtags (2-3 niche, 1-2 format, 1 broad).
+- The Higgsfield publish form is an MCP-Apps widget: it did not render in the Cowork cloud session (2026-11-05), and the
+  prepared session expires after 2 h. Always also send the TikTok file + caption so the owner can post from the TikTok app.
 - Push-notify the owner with: the video, the cover, the caption, and "open this session to publish" (aim ~7 pm Dubai).
 - Append the day to `published.md` (date, slug, category, story, sources, voice id, caption) and commit + push the
   repo (new story folder + any reusable improvements; never media, never keys).
