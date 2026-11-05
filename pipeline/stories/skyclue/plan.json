@@ -1,0 +1,13 @@
+{"length_s": 68.5, "model_id": "music_v1",
+ "global": ["instrumental", "playful cartoon detective score", "quirky investigation", "light orchestral with pizzicato and soft synth", "no vocals"],
+ "sections": [
+  {"name": "hook", "s": 0, "e": 6.0, "style": "cheeky mysterious detective pizzicato, soft vibraphone, a distant whoosh feeling, light and intriguing"},
+  {"name": "clue", "s": 6.0, "e": 14.45, "style": "sneaky detective bass walk, brushed snare, muted trumpet hint, curious and playful"},
+  {"name": "listen", "s": 14.45, "e": 19.95, "style": "hushed suspense, high strings tremolo, soft ticking clock, then a bright little sting"},
+  {"name": "data", "s": 19.95, "e": 24.65, "style": "comedic chaotic bustle, fast marimba runs, bouncy tuba, cartoon busy energy"},
+  {"name": "search", "s": 24.65, "e": 34.7, "style": "building driving pulse, synth arpeggio and pizzicato ostinato, rising tension, computing montage"},
+  {"name": "reveal", "s": 34.7, "e": 40.25, "style": "triumphant eureka brass hit then sly playful detective theme, satisfied"},
+  {"name": "deadpan", "s": 40.25, "e": 48.4, "style": "sparse deadpan comic pizzicato plunks, dry tuba, quiet with small comic stabs"},
+  {"name": "analogy", "s": 48.4, "e": 60.45, "style": "light curious explainer groove, ukulele and glockenspiel, gentle and clever"},
+  {"name": "finale", "s": 60.45, "e": 68.5, "style": "warm wondering strings swelling, then a playful bouncy button ending, comic final plink"}
+ ]}

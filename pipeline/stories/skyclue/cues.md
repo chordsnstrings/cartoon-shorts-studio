@@ -1,0 +1,57 @@
+# Cues
+
+LUFS mix -15.0, TP -1.2 dBTP, voice -16.5
+
+-   0.000  f   0  bed river
+-   0.000  f   0  jet distant
+-   3.333  f 100  bed river
+-   5.120  f 154  faint hush
+-   5.700  f 171  flash whoosh
+-   6.000  f 180  bed desk
+-   7.950  f 238  clip click
+-   8.110  f 243  rec beep
+-  10.867  f 326  bed map
+-  11.920  f 358  calendar flip
+-  13.080  f 392  lens swish
+-  14.467  f 434  bed desk
+-  16.200  f 486  streak 1
+-  17.180  f 515  gap clock
+-  19.110  f 573  streak 2
+-  19.933  f 598  bed desk
+-  20.490  f 615  DRIVES clatter
+-  22.540  f 676  typing
+-  23.170  f 695  printer
+-  23.370  f 701  paper rush
+-  24.667  f 740  bed map
+-  25.450  f 764  dots pop
+-  28.133  f 844  bed map
+-  29.390  f 882  dots vanish
+-  30.867  f 926  bed map
+-  31.330  f 940  computing
+-  34.700  f1041  bed map
+-  34.750  f1042  ONE ding
+-  35.700  f1071  dive whoosh
+-  36.000  f1080  bed river
+-  39.180  f1175  camera servo
+-  39.430  f1183  servo click
+-  40.267  f1208  bed desk
+-  43.933  f1318  bed desk
+-  45.790  f1374  filter swish
+-  46.610  f1398  STATIC
+-  47.160  f1415  squash
+-  48.400  f1452  SIREN pass
+-  48.400  f1452  bed street
+-  49.890  f1497  engine
+-  51.800  f1554  bed river
+-  51.800  f1554  jet high
+-  54.480  f1634  JET low pass
+-  56.300  f1689  bed map
+-  57.010  f1710  blips
+-  60.467  f1814  bed river
+-  60.467  f1814  jet golden
+-  62.240  f1867  clock tick
+-  63.410  f1902  map shimmer
+-  64.167  f1925  bed river
+-  66.400  f1992  bird flutter
+-  67.000  f2010  bird lands
+-  67.350  f2020  tweet

@@ -1,0 +1,70 @@
+[
+{
+"text": "[excited] A YouTuber found exactly where a video was filmed...",
+"pause": 0.1
+},
+{
+"text": "[mischievously] using airplanes nobody could even hear.",
+"pause": 0.4
+},
+{
+"text": "[curious] The clue: a blurry security camera clip. Trees. A riverbank.",
+"pause": 0.15
+},
+{
+"text": "All he knew: September eighth, somewhere in America.",
+"pause": 0.3
+},
+{
+"text": "[intrigued] But hidden in the audio were two planes... passing nine hundred and twenty seconds apart.",
+"pause": 0.3
+},
+{
+"text": "[excited] He pulled fifty gigabytes of flight data, and wrote five thousand lines of code.",
+"pause": 0.25
+},
+{
+"text": "First pass: seventy thousand possible spots.",
+"pause": 0.15
+},
+{
+"text": "Filter by that gap: fifteen thousand.",
+"pause": 0.15
+},
+{
+"text": "Then he simulated every plane's sound, from every spot.",
+"pause": 0.3
+},
+{
+"text": "[surprised] One spot fit. Street View... same trees. Same pole. There's the camera.",
+"pause": 0.35
+},
+{
+"text": "[deadpan] Luckily, he says the odds of anyone doing this to you are slim.",
+"pause": 0.15
+},
+{
+"text": "[deadpan] Unluckily, the plane sound survived filters, noise, and phone compression.",
+"pause": 0.3
+},
+{
+"text": "[curious] How? A siren drops in pitch as it passes you.",
+"pause": 0.1
+},
+{
+"text": "Planes do it too, and how fast it drops tells you how close they flew.",
+"pause": 0.1
+},
+{
+"text": "And planes broadcast where they are. Publicly. All day.",
+"pause": 0.35
+},
+{
+"text": "[thoughtful] So the sky in your video is a clock... and a map.",
+"pause": 0.35
+},
+{
+"text": "[playful] All that... to find a camera that films trees.",
+"pause": 0.7
+}
+]
