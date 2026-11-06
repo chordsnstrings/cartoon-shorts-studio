@@ -1,0 +1,12 @@
+{"length_s": 69.5, "model_id": "music_v1",
+ "global": ["instrumental", "playful cartoon comedy score", "quirky nordic folk flavour", "light orchestral with pizzicato, accordion and glockenspiel", "no vocals"],
+ "sections": [
+  {"name": "hook", "s": 0, "e": 6.55, "style": "cheeky bouncy pizzicato with a quirky accordion riff, rising excitement, a little cartoon whoosh energy"},
+  {"name": "setting", "s": 6.55, "e": 14.45, "style": "calm cosy library groove, soft brushed snare, gentle celesta and upright bass, studious and warm"},
+  {"name": "rising", "s": 14.45, "e": 27.75, "style": "building comedic tension, ticking pizzicato ostinato getting faster, marimba runs, nervous and busy"},
+  {"name": "crash", "s": 27.75, "e": 31.55, "style": "comic alarm stab, cartoon brass hit then chaotic tumbling woodwinds"},
+  {"name": "deadpan", "s": 31.55, "e": 36.55, "style": "sparse deadpan comic plunks, a lonely accordion phrase, quiet, then a sneaky low tuba sting"},
+  {"name": "bots", "s": 36.55, "e": 49.25, "style": "sneaky mischievous robot march, bouncy tuba and bassoon, bleepy synth accents, playful heist feel"},
+  {"name": "fight", "s": 49.25, "e": 58.9, "style": "determined comic standoff, staccato strings and snare, a heroic little brass fanfare"},
+  {"name": "finale", "s": 58.9, "e": 69.5, "style": "warm gentle nordic folk ending, solo accordion and soft strings, wistful and sweet, then a tiny comic plink button"}
+ ]}

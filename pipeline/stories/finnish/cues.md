@@ -1,0 +1,58 @@
+# Cues
+
+LUFS mix -15.0, TP -1.2 dBTP, voice -16.2
+
+-   0.000  f   0  bed lib
+-   0.250  f   8  bubble pops
+-   2.900  f  87  bed lib
+-   3.080  f  92  eleven ding
+-   4.780  f 143  swirl whoosh
+-   6.233  f 187  flash whoosh
+-   6.533  f 196  bed desk
+-   7.610  f 228  tiny bar bloop
+-   8.733  f 262  bed lib
+-  11.200  f 336  pages/typing
+-  13.620  f 409  kiosk hum
+-  14.467  f 434  bed desk
+-  15.410  f 462  icons
+-  17.467  f 524  bed desk
+-  17.620  f 529  FIVE HUNDRED rush
+-  17.670  f 530  meter up
+-  19.900  f 597  bed desk
+-  23.680  f 710  six ticks
+-  25.150  f 754  25 ticks
+-  27.733  f 832  bed lib
+-  29.120  f 874  QUEUE FULL buzz
+-  30.380  f 911  fling whoosh
+-  30.680  f 920  papers
+-  30.780  f 923  oof
+-  31.533  f 946  bed fin
+-  32.770  f 983  lone bird
+-  34.300  f1029  bed lib
+-  34.300  f1029  bot steps
+-  35.780  f1073  head servo
+-  36.130  f1084  bleep
+-  36.533  f1096  bed lib
+-  36.733  f1102  scrape whine
+-  36.933  f1108  book flaps
+-  38.240  f1147  cards whirl
+-  40.467  f1214  bed buf
+-  40.867  f1226  plates
+-  42.120  f1264  nope bleep
+-  43.170  f1295  steps
+-  43.690  f1311  DUMP into truck
+-  44.500  f1335  tiptoe
+-  46.010  f1380  door pop
+-  49.267  f1478  bed desk
+-  49.840  f1495  stamps
+-  52.200  f1566  pop back
+-  53.400  f1602  sigh
+-  54.000  f1620  bed lib
+-  56.390  f1692  welcome chime
+-  56.920  f1708  bot approach
+-  57.930  f1738  BOING
+-  58.900  f1767  bed lib
+-  59.300  f1779  more bots
+-  61.700  f1851  worse pops
+-  62.500  f1875  bed fin
+-  68.350  f2050  note plink
