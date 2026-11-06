@@ -10,3 +10,6 @@
   look points ~9 m away. Portrait frame + landscape monitor: screen inserts pan across the screen instead of fitting it.
   The security camera must not face its own pole (lens toward the river, mounted on the pole's +x side).
 - Render: scripts/final.sh SkyclueShort skyclue 2055 6 2.
+- Final: 2 h 50 min render (6 chunks x 2). Shot 2's glide to the camera head passed through the pole (QA pop f164-167): made it a cut,
+  re-rendered f147-179 and spliced (encode the parts separately + concat demuxer; a one-pass trim/concat filter OOMs at 1440x2560).
+- Final Opus audit: SHIP. Note: the ambulance carried a red cross (protected emblem): code now paints a blue disc; avoid red crosses.

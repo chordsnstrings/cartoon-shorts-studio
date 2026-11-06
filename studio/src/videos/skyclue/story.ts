@@ -184,7 +184,7 @@ const CAMS: Record<number, Key[]> = {
   2: [
     // low angle up at the sky: the plane crosses, faint rings fall toward the camera
     { f: F(3.35), s: (f) => dolly(Rv(-1.5, 1.4, 2.0), aim(Rv(-1.5, 1.4, 2.0), Rv(2.0, 40, -70)), pushK(f, F(3.35), 0.0025), { fov: 58, roll: 0.05 }) },
-    { f: F(4.9), dur: 22, s: (f) => dolly(Rv(2.7, 3.3, -5.4), [CAM_HEAD[0], CAM_HEAD[1] + 0.25, CAM_HEAD[2]], pushK(f, F(4.9), 0.002, 0.007, 25), { fov: 40, roll: -0.04 }) }, // "hear": down to the camera
+    { f: F(4.9), cut: true, s: (f) => dolly(Rv(2.7, 3.3, -5.4), [CAM_HEAD[0], CAM_HEAD[1] + 0.25, CAM_HEAD[2]], pushK(f, F(4.9), 0.002, 0.007, 25), { fov: 40, roll: -0.04 }) }, // "hear": down to the camera
   ],
   3: [
     { f: F(6.0), s: (f) => dolly(Dk(-0.3, 1.3, 1.5), Dk(0.05, 1.0, -1.3), pushK(f, F(6.0), 0.0025), { fov: 48, roll: 0.02 }) }, // the YouTuber at his desk

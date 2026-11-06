@@ -28,7 +28,7 @@ const ambTex = () => ctex("ambSide", 512, 256, (g) => {
   g.fillStyle = "#f6f4ee"; g.fillRect(0, 0, 512, 256);
   g.fillStyle = "#d8443a"; g.fillRect(0, 140, 512, 30);
   g.fillStyle = "#f2c43a"; g.fillRect(0, 172, 512, 10);
-  g.fillStyle = "#d8443a"; g.fillRect(226, 50, 60, 20); g.fillRect(246, 30, 20, 60); // a plain cross
+  g.fillStyle = "#3a64b8"; g.beginPath(); g.arc(256, 60, 30, 0, 6.283); g.fill(); // plain blue disc (the red cross is a protected emblem: the 2026-11-05 render still has it)
   g.fillStyle = "#4a6aa8"; g.fillRect(380, 30, 110, 70);
 });
 const paperTex = () => ctex("codePaper", 256, 1024, (g, r) => {

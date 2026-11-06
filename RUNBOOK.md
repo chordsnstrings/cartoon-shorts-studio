@@ -74,3 +74,9 @@ Repo-specific helpers for those steps:
 - Flash: start it on the cut frame so it covers the cut.
 - Ink `dispose` crashed on crossfade unmount — guarded in Short.tsx.
 - Lens blur dominates render time; keep 6+16+6 taps; msaa 0 at 2K.
+
+## Gotchas (from the sky-clue short)
+- pushK creeps the camera along the whole pos->look vector: with a far look target the camera travels metres. Aim look points ~9 m away.
+- Check every long glide for props it passes through (poles, trees): a QA "pop" run of 3-4 frames inside a shot is usually that.
+- Splicing a re-rendered range at 2K: encode the parts separately and join with the concat demuxer (filter trim/concat runs out of memory).
+- No protected emblems (red cross / red crescent) on props; no text anywhere.
