@@ -174,7 +174,7 @@ const CAMS: Record<number, Key[]> = {
   ],
   3: [
     { f: F(6.55), s: (f) => ({ ...dolly(monCam(0.95, 0.06, 0), monLook(0.06, 0), pushK(f, F(6.55), 0.0022)), fov: 38, roll: 0.02 }) },
-    { f: F(7.5), dur: 22, s: (f) => ({ ...dolly(monCam(0.85, -0.16, -0.04), monLook(-0.16, -0.04), pushK(f, F(7.5), 0.002, 0.006, 25)), fov: 38, roll: -0.02 }) }, // "fifteen": the tiny bar
+    { f: F(7.5), dur: 22, s: (f) => ({ ...dolly(monCam(0.85, -0.05, -0.04), monLook(-0.05, -0.04), pushK(f, F(7.5), 0.002, 0.006, 25)), fov: 38, roll: -0.02 }) }, // "fifteen": the tiny bar
   ],
   4: [
     // along a reading table: students cramming under the lamps; then over to the kiosk humming in the aisle

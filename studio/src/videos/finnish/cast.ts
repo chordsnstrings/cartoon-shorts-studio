@@ -250,7 +250,7 @@ const students = (cam: CamInfo, out: Stage, t: number, mood: (i: number) => Expr
   });
 };
 /** search bubbles flying from the entrance to the kiosk (count grows), or swirling round it */
-const bubbles = (out: Stage, t: number, n: number, swirl: number) => {
+const bubbles = (out: Stage, t: number, n: number, swirl: number, cam?: CamInfo) => {
   for (let i = 0; i < n; i++) {
     const sp = 0.45 + hh(i, 1) * 0.35, u = (t * sp + hh(i, 2)) % 1;
     let x: number, y: number, z: number;
@@ -262,14 +262,15 @@ const bubbles = (out: Stage, t: number, n: number, swirl: number) => {
       x = sx + (KSCR[0] - sx) * u + 0.5 * Math.sin(u * 6 + i); y = sy + (KSCR[1] + 0.3 - sy) * u + 1.2 * Math.sin(u * Math.PI); z = -17.4 + (KSCR[2] + 17.4) * u;
     }
     const s = 0.26 + hh(i, 11) * 0.14;
+    if (cam && cam.pos.distanceTo(tmp.set(x, y, z)) < 1.8) continue; // never through the lens
     fx1(out, `sb${i % 4}`, 256, 256, (p) => fxSearch(p, i % 4), x, y, z, s, s, 0.15 * Math.sin(t * 2 + i));
   }
 };
 
 const lib = (cam: CamInfo, out: Stage, id: number, t: number) => {
   if (id === 1 || id === 4 || id === 15) students(cam, out, t, (i) => (id === 4 ? (["nervous", "dazed", "stern", "neutral"] as Expr[])[i % 4] : id === 15 ? (i % 2 ? "nervous" : "shock") : (i % 3 ? "neutral" : "stern")), 0.62, id === 4);
-  if (id === 1) bubbles(out, t, Math.min(60, 8 + Math.floor(t * 20)), 0.1);
-  if (id === 2) bubbles(out, t, Math.min(90, 40 + Math.floor((t - 2.9) * 18)), at(t, W.finnish) ? 0.85 : 0.5);
+  if (id === 1) bubbles(out, t, Math.min(60, 8 + Math.floor(t * 20)), 0.1, cam);
+  if (id === 2) bubbles(out, t, Math.min(90, 40 + Math.floor((t - 2.9) * 18)), at(t, W.finnish) ? 0.85 : 0.5, cam);
   if (id === 4 && at(t, W.humming)) for (let k = 0; k < 3; k++) { const u = ((t - W.humming) * 0.8 + k / 3) % 1; fx1(out, `hum${Math.floor(u * 10)}`, 128, 128, (p) => fxSparkle(p, k), KSCR[0] + (k - 1) * 0.35, KSCR[1] + 0.35 + u * 0.5, KSCR[2], 0.09, 0.09); }
   if (id === 8) {
     // a line of students at the kiosk; on "everybody out" they are flung back across the hall
@@ -345,7 +346,7 @@ const lib = (cam: CamInfo, out: Stage, id: number, t: number) => {
       if (Math.abs(x - LIB) > 3.4 && Math.abs(x - LIB) < 5.8 && z > -3.4 && z < 9.4) continue; // not on the tables
       out.places.push(bot(cam, x, 0, z, { la: 10 + 40 * (i % 3), le: 20, ra: 140 * (i % 2), re: 20, phase: ph, face: i % 4 ? "happy" : "scan", blink: lidAt(t, 90 + i) }));
     }
-    bubbles(out, t, 50, 0.6);
+    bubbles(out, t, 50, 0.6, cam);
   }
 };
 

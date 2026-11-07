@@ -80,3 +80,14 @@ Repo-specific helpers for those steps:
 - Check every long glide for props it passes through (poles, trees): a QA "pop" run of 3-4 frames inside a shot is usually that.
 - Splicing a re-rendered range at 2K: encode the parts separately and join with the concat demuxer (filter trim/concat runs out of memory).
 - No protected emblems (red cross / red crescent) on props; no text anywhere.
+
+## Gotchas (from the finnish short)
+- Two parallel 2K chunk renders on this 2-CPU box deadlock: the second browser sits at 0 % CPU forever. Run final.sh with jobs=1
+  (`scripts/final.sh <Comp> <slug> <frames> 6 1`, ~38 min per 348-frame chunk). Killing final.sh also kills its `touch .done` subshells:
+  touch the .done of a chunk that finished on its own.
+- Splicing patches: re-encode only the patched pieces with `-video_track_timescale 90000` (Remotion segments use 1/90000) and join
+  with the concat demuxer `-c copy`. Mixed timebases + `setpts=N/30/TB` gave the right frame count but shifted later cuts 4-5 frames
+  late (audio out of sync): always check cut frames with a frame-diff after splicing.
+- Portrait inserts of a landscape screen see only its central ~40 %: keep screen content in the 0.3-0.7 width band.
+- Golden light turns snow into orange sand; snowy places read in "day" light.
+- Effect cards that fly around (bubbles) must skip anything within ~1.8 m of the camera, or a huge blob crosses the lens.
