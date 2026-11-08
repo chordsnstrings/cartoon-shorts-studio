@@ -1,0 +1,5 @@
+{"master": "/home/claude/cartoon-shorts-studio/studio/out/floppy/floppy_master_1440x2560.mp4", "day": "/home/claude/day/floppy",
+ "out": "/home/claude/cartoon-shorts-studio/studio/out/floppy/floppy_cut35_1440x2560.mp4", "fps": 30,
+ "segs": [[4.8, 5.7, 0, 0.9], [0.9, 2.7], [2.7, 6.9], [22.65, 28.85], [43.75, 52.4], [60.35, 69.3333], [56.6, 60.35, -1, -1]],
+ "extra_voice": [["/home/claude/day/floppy/cut/q/voice.wav", 29.55, 0.55, 5.15]],
+ "text": {"lines": ["Air traffic control still", "runs on FLOPPY DISKS"], "until_s": 3.0, "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"}}

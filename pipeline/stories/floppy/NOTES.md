@@ -19,3 +19,6 @@
 - Render: scripts/final.sh FloppyShort floppy 2080 6 1.
 - Final Opus audit: FIX - airliners crossing the control tower at sunset read like a plane hitting a tower (9/11 echo). Moved both planes
   well above the cab, tilted the camera up, re-rendered the last chunk. RULE: never let an aircraft silhouette overlap a tower/building.
+- The 2026-11-08 runbook override (25-35 s, frame-1 hook text, end question) landed mid-run: made a 34.5 s TikTok cut from the 69 s master with
+  pipeline/audio/recut.py (picture segments + voice/SFX stems, continuous score, PIL hook-text overlay, extra ElevenLabs question line). Skip the
+  4-frame white flash when a cut starts near FLASH_AT.

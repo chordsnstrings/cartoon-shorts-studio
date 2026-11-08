@@ -116,3 +116,4 @@ Repo-specific helpers for those steps:
 - A 36 m airliner only fits a portrait frame 90+ m from the camera. Inserts of a landscape CRT: keep screen content in the 0.3-0.7 width band.
 - A sleeping tool call that gets killed can take a nohup render with it: start final.sh with `setsid nohup ... < /dev/null & disown`.
 - Glow/soft fx cards over a screen render as a black wedge; don't put them there.
+- To shorten a finished short without re-rendering: `python3 pipeline/audio/recut.py stories/<slug>/cut.json` (segments + stems + hook text).
