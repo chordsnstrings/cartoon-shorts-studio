@@ -110,3 +110,9 @@ Repo-specific helpers for those steps:
 - Portrait inserts of a landscape screen see only its central ~40 %: keep screen content in the 0.3-0.7 width band.
 - Golden light turns snow into orange sand; snowy places read in "day" light.
 - Effect cards that fly around (bubbles) must skip anything within ~1.8 m of the camera, or a huge blob crosses the lens.
+
+## Gotchas (from the floppy short)
+- Never let an aircraft silhouette overlap a tower or building in frame (the final audit read it as a 9/11 echo): fly planes clearly above or beside.
+- A 36 m airliner only fits a portrait frame 90+ m from the camera. Inserts of a landscape CRT: keep screen content in the 0.3-0.7 width band.
+- A sleeping tool call that gets killed can take a nohup render with it: start final.sh with `setsid nohup ... < /dev/null & disown`.
+- Glow/soft fx cards over a screen render as a black wedge; don't put them there.

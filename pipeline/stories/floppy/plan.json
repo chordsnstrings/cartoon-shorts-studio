@@ -1,0 +1,12 @@
+{"length_s": 69.33, "model_id": "music_v1",
+ "global": ["instrumental", "playful cartoon comedy score", "retro 1980s computer flavour", "light orchestral with pizzicato, chiptune bleeps and analog synth", "no vocals"],
+ "sections": [
+  {"name": "hook", "s": 0, "e": 7.0, "style": "cheeky bouncy pizzicato with a retro 8-bit synth riff, a cartoon whoosh energy, then a comic deadpan stop"},
+  {"name": "setting", "s": 7.0, "e": 15.4, "style": "smooth airy jet-age lounge groove, soft brushed drums, vibraphone, then a dusty old-machine hum with chunky 80s synth bass"},
+  {"name": "rising", "s": 15.4, "e": 22.7, "style": "busy comedic tension, ticking pizzicato ostinato, marimba runs, quirky bassoon, getting more absurd"},
+  {"name": "snap", "s": 22.7, "e": 28.9, "style": "comic build to a cartoon brass stab, then a tiny sad trombone plunk"},
+  {"name": "deadpan", "s": 28.9, "e": 34.6, "style": "sparse deadpan comic plunks, a lonely retro synth beep phrase, quiet"},
+  {"name": "highway", "s": 34.6, "e": 43.8, "style": "frantic comic chase, galloping strings and snare, slapstick pit-stop energy, honky brass"},
+  {"name": "announce", "s": 43.8, "e": 60.4, "style": "triumphant playful fanfare, bright brass and glockenspiel, modern upbeat pop-orchestral groove, optimistic"},
+  {"name": "finale", "s": 60.4, "e": 69.33, "style": "warm gentle wistful ending, soft retro synth pad and music box, sweet, then a tiny comic 8-bit plink button"}
+ ]}

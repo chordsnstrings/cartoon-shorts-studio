@@ -1,0 +1,62 @@
+# Cues
+
+LUFS mix -15.0, TP -1.2 dBTP, voice -16.4
+
+-   0.000  f   0  bed map
+-   0.300  f   9  map whoosh
+-   2.700  f  81  bed desk
+-   3.100  f  93  disk slide
+-   3.840  f 115  DRIVE CLUNK
+-   3.950  f 118  drive whir
+-   4.550  f 136  disk up
+-   4.667  f 140  bed desk
+-   7.000  f 210  bed sky
+-   7.000  f 210  jet pass
+-   9.867  f 296  bed desk
+-  11.810  f 354  CRT on
+-  12.600  f 378  keys
+-  15.400  f 462  bed desk
+-  15.860  f 476  SPUTTER
+-  17.250  f 518  parcel fall
+-  17.600  f 528  PARCEL THUMP
+-  18.333  f 550  bed desk
+-  19.140  f 574  strip
+-  22.667  f 680  bed desk
+-  23.940  f 718  cap blip
+-  26.333  f 790  bed desk
+-  27.300  f 819  photo pops out
+-  27.720  f 832  POP
+-  28.867  f 866  bed desk
+-  29.610  f 888  pat
+-  30.330  f 910  works chime
+-  31.133  f 934  bed desk
+-  33.630  f1009  sad warble
+-  34.500  f1035  bed air
+-  34.500  f1035  take-off roar
+-  35.000  f1050  landing
+-  37.867  f1136  bed road
+-  38.750  f1162  tyre off
+-  38.950  f1168  tyre bounce
+-  40.650  f1220  TYRE ON
+-  42.300  f1269  riders cheer
+-  43.733  f1312  bed desk
+-  49.560  f1487  X STAMP
+-  50.150  f1505  plane up whoosh
+-  51.500  f1545  bed desk
+-  51.900  f1557  IN ding
+-  51.900  f1557  toss whoosh
+-  52.400  f1572  bed desk
+-  53.780  f1613  tile weather
+-  54.420  f1633  tile outages
+-  55.310  f1659  tile alerts
+-  55.740  f1672  together chime
+-  56.600  f1698  bed map
+-  56.700  f1701  site dots pop
+-  60.333  f1810  bed desk
+-  62.980  f1889  CLICK
+-  64.300  f1929  bed air
+-  64.300  f1929  sunset jet
+-  66.400  f1992  bed desk
+-  66.750  f2002  disk slide 2
+-  67.230  f2017  CLUNK 2
+-  67.500  f2025  save beep
