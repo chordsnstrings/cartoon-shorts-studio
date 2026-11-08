@@ -1,8 +1,13 @@
 # Daily tech-news cartoon short — runbook for the scheduled agent
 
-Goal: one ~55-70 s vertical cartoon 3D short per day about the most viral fresh tech/AI/Apple/gadget story, made
+Goal: one 25-35 s vertical cartoon 3D short per day about the most viral fresh tech/AI/Apple/gadget story, made
 with the `cartoon-3d-short` skill, then handed to TikTok via Higgsfield with an optimised caption. The script is
 auto-approved (owner's standing instruction). Nothing about ARKS or the owner's companies, ever.
+
+> **2026-11-08 analytics override (beats any older rule here or in the skill):** first 6 posts all stalled at ~150
+> views. 97% For You traffic (distribution fine), avg watch 12% of 71 s, most viewers left at **0:01**, 0 shares,
+> 0 comments. Causes: static opening frame with no text, too long, stale stories. Fixes are baked into steps 1, 2, 5.
+> Max ONE post per day.
 
 ## 0. Setup (fresh cloud session, ~5 min)
 ```bash
@@ -15,8 +20,15 @@ export CHROME=/opt/pw-browsers/chromium-1243/chrome-linux64/chrome
 Load the skills `cartoon-3d-short` (rules + look values) and `modelark` (ark.py, key handled there).
 Work dir for the day: `~/day/<slug>/` (SCRIPT.md, voice/, audio/, out/). Save after every step.
 
-## 1. Topic (search, ~15 min)
-- Search the last 24-48 h: viral tech, AI, Apple/iPhone, gadgets, robots, space-tech, big app/product launches,
+## 1. Topic (search online, ~15 min) — FRESH ONLY
+- Run `date` first. Use WebSearch (mode "extended" for news) with today's date / "today" / "this week" in queries
+  (e.g. "viral AI news today", "Apple news <Month YYYY>", "tech fail this week"); WebFetch the articles.
+- The EVENT itself must have happened in the last 48 h (72 h max if nothing qualifies). Check the event date in the
+  article body, not just the article's publish date — reject recaps of older events (e.g. a March story re-reported
+  in November). Never use a story from memory/training data; every story must come from today's search results.
+- Log the event date + article dates in `SCRIPT.md`. If no fresh story passes, search wider categories; never fall
+  back to an old story.
+- Categories: viral tech, AI, Apple/iPhone, gadgets, robots, space-tech, big app/product launches,
   funny tech fails. Rotate categories day to day (log the category in the daily notes) so we learn what gets views.
 - Pick ONE story that is (a) true and confirmed by 2+ reputable sources, (b) visual with a physical cause and effect,
   (c) funny or surprising, (d) not about a private individual, crime victims, deaths, politics or finance.
@@ -24,8 +36,14 @@ Work dir for the day: `~/day/<slug>/` (SCRIPT.md, voice/, audio/, out/). Save af
 - Write facts + source URLs at the top of `SCRIPT.md`.
 
 ## 2. Script (auto-approved)
-Skill beat formula: hook (absurd fact, 1 line) → setting → 3-4 escalating beats → snap → deadpan "Luckily / Unluckily"
-→ one-idea explanation through an everyday analogy → consequence → callback twist. 55-70 s at ~3.4 words/s.
+Compressed formula, 25-35 s at ~3.4 words/s (~85-120 words):
+- **0-2 s hook:** open ON the climax/payoff (the smash, the crease, the fail) with motion and a cartoon character
+  visibly reacting — never a static object or establishing shot. First spoken line = the hook, no intro.
+- **Burned-in hook text from frame 1** (big, bold, top-third, ≤8 words, states the payoff, e.g. "Apple's $2,000
+  folding iPhone has a crease problem 😬"), held ~3 s. This overrides the skill's "no text anywhere" rule.
+- Then: 2-3 fast beats (what happened, why) → one-line twist.
+- **End:** a question to the viewer ("Would you trust it?") + share prompt ("Send this to…"). Put the same question
+  in the caption and in a pinned comment.
 Jokes are researched facts. English only. Never describe what the viewer already sees. Brand/company names may be
 said in narration if factual; they never appear on screen and never in the caption.
 
@@ -47,21 +65,22 @@ Repo-specific helpers for those steps:
   concurrency 1; ~4-5 h at 2K. Fix audit defects by re-rendering frame ranges as PNG and re-encoding (crf 16).
 
 ## 7. TikTok (Higgsfield connector; account already connected)
-- TikTok file: 1080x1920, 30 fps, H.264 high crf 17, AAC 192k, faststart. Cover = the impact/payoff frame.
+- TikTok file: 1080x1920, 30 fps, H.264 high crf 17, AAC 192k, faststart. Cover = the impact/payoff frame with the hook text. Before render, check frame 0: motion + face + hook text, or redo.
 - Upload: Higgsfield `media_upload` → curl PUT → `media_confirm` (video). Then `tiktok_accounts` → `tiktok_prepare_publish`
   mode DIRECT_POST with title + description (caption + hashtags). The owner submits the publish form himself — the
   agent cannot publish. Do not prefill privacy/interactions; recommend in the message: public, comments/duet/stitch
   on, commercial off, AI-generated label on, no added music.
 - Caption rules (memory: tiktok-channel playbook): one punchy line ≤100 chars teasing the payoff + emoji pair, "real
-  story" + month/year, no brand names; 4-6 hashtags (2-3 niche, 1-2 format, 1 broad).
+  story" + month/year, no brand names, end with the viewer question; 4-6 hashtags (2-3 niche, 1-2 format, 1 broad).
 - The Higgsfield publish form is an MCP-Apps widget: it did not render in the Cowork cloud session (2026-11-05), and the
   prepared session expires after 2 h. Always also send the TikTok file + caption so the owner can post from the TikTok app.
 - Push-notify the owner with: the video, the cover, the caption, and "open this session to publish" (aim ~7 pm Dubai).
+- After posting: pin a comment with the viewer question + sources; reply to comments in the first hour.
 - Append the day to `published.md` (date, slug, category, story, sources, voice id, caption) and commit + push the
   repo (new story folder + any reusable improvements; never media, never keys).
 
 ## Gotchas (from the orbit short)
-- ElevenLabs v3 leaves 1 s holes mid-sentence: `MAX_GAP` in eleven_voice.py squeezes them; `SPEED=1.08` keeps 55-70 s.
+- ElevenLabs v3 leaves 1 s holes mid-sentence: `MAX_GAP` in eleven_voice.py squeezes them; `SPEED=1.08`; trim the script, not the speed, to hit 25-35 s.
 - Music: composition plans only work on `music_v1`, and without `force_instrumental` (instrumental via negative styles).
 - Async textures (staticFile images) must load before the ThreeCanvas mounts, or held frames render without them.
 - Keep each exterior place's ground/mountains within +-195 m of its x offset (places are 400 m apart).
@@ -79,7 +98,7 @@ Repo-specific helpers for those steps:
 - pushK creeps the camera along the whole pos->look vector: with a far look target the camera travels metres. Aim look points ~9 m away.
 - Check every long glide for props it passes through (poles, trees): a QA "pop" run of 3-4 frames inside a shot is usually that.
 - Splicing a re-rendered range at 2K: encode the parts separately and join with the concat demuxer (filter trim/concat runs out of memory).
-- No protected emblems (red cross / red crescent) on props; no text anywhere.
+- No protected emblems (red cross / red crescent) on props; no text anywhere except the frame-1 hook text (step 2).
 
 ## Gotchas (from the finnish short)
 - Two parallel 2K chunk renders on this 2-CPU box deadlock: the second browser sits at 0 % CPU forever. Run final.sh with jobs=1
