@@ -1,0 +1,45 @@
+# Cues
+
+LUFS mix -15.0, TP -1.2 dBTP, voice -16.6
+
+-   0.000  f   0  bed hall
+-   0.150  f   4  stair step
+-   0.500  f  15  servo
+-   3.760  f 113  carry bump
+-   4.850  f 146  flash whoosh
+-   5.000  f 150  bed street
+-   5.380  f 161  COINS
+-   6.030  f 181  clock
+-   6.540  f 196  CLAW clack
+-   7.710  f 231  sock squeak
+-   9.000  f 270  bed street
+-   9.150  f 274  antenna bleep
+-   9.733  f 292  bed office
+-  10.000  f 300  controller clicks
+-  11.370  f 341  signal
+-  13.200  f 396  robot step
+-  13.433  f 403  bed street
+-  14.200  f 426  servo strain
+-  15.440  f 463  slip
+-  15.640  f 469  SLIP THUMP
+-  16.133  f 484  bed street
+-  16.420  f 493  FREEZE warble
+-  17.300  f 519  bed office
+-  17.910  f 537  static
+-  17.940  f 538  SPUTTER
+-  18.410  f 552  alarm
+-  18.510  f 555  smoke puff
+-  19.533  f 586  bed bath
+-  21.970  f 659  HEAD OFF 1
+-  22.300  f 669  click on
+-  22.530  f 676  HEAD OFF 2
+-  22.870  f 686  click on
+-  23.120  f 694  HEAD OFF 3
+-  23.867  f 716  bed bath
+-  24.130  f 724  poke
+-  24.700  f 741  poke
+-  25.330  f 760  CLICK ON
+-  25.380  f 761  sparkle chime
+-  26.300  f 789  bed bath
+-  27.870  f 836  clean sparkle
+-  28.540  f 856  wave servo

@@ -1,0 +1,10 @@
+{"length_s": 31.333, "model_id": "music_v1",
+ "global": ["instrumental", "playful cartoon comedy score", "quirky home-robot flavour", "pizzicato strings, marimba, toy-like synth bleeps, light brushed drums", "no vocals"],
+ "sections": [
+  {"name": "hook", "s": 0, "e": 5.2, "style": "bouncy cheeky pizzicato and clumsy tuba steps, comic effort, ends on a little brass ta-da"},
+  {"name": "price", "s": 5.2, "e": 9.0, "style": "light bouncy marimba groove, three cheeky plucked hits, tidy and bright"},
+  {"name": "twist", "s": 9.0, "e": 13.4, "style": "sneaky tiptoe pizzicato, mysterious low clarinet, whispered secret mood"},
+  {"name": "stairs", "s": 13.4, "e": 19.4, "style": "wobbly drunken trombone slides and lurching tuba, then a sudden comic stop and a fizzy synth sputter"},
+  {"name": "toilet", "s": 19.4, "e": 26.2, "style": "deadpan sparse plunks, patient ticking woodblock, three small boing hits, dry humour"},
+  {"name": "ending", "s": 26.2, "e": 31.333, "style": "warm playful upbeat outro, bright glockenspiel and bouncy bass, then a tiny comic button"}
+ ]}

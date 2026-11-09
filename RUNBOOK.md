@@ -117,3 +117,12 @@ Repo-specific helpers for those steps:
 - A sleeping tool call that gets killed can take a nohup render with it: start final.sh with `setsid nohup ... < /dev/null & disown`.
 - Glow/soft fx cards over a screen render as a black wedge; don't put them there.
 - To shorten a finished short without re-rendering: `python3 pipeline/audio/recut.py stories/<slug>/cut.json` (segments + stems + hook text).
+
+## Gotchas (from the tidy short)
+- Hook text can live in the composition: `HookText` overlay in studio/src/videos/tidy/Short.tsx (Poppins + Noto Color Emoji, vh units,
+  frames 0-90 + 8-frame fade) - copy it instead of the PIL post step; emoji render fine in the cloud Chromium.
+- Never let a character's hand/claw end near another character's face or throat (both Opus checks flagged it as gagging/choking).
+  "Carried" reads when the carried card is lifted (feet clearly above the carrier's), tilted, legs dangling, hands at waist level.
+- Points far from a card's centre swing back in depth (the card faces the camera): props drawn at the card edge can sink into nearby
+  geometry. Place loose props with onCard at the same canvas point (small fwd) so drawn tip and prop meet.
+- 940 frames at 2K = 4 chunks x ~40 min with jobs=1. To redo one chunk, delete its seg_*.mp4(.done) + status.txt and rerun final.sh.
