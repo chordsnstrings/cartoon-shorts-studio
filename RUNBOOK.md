@@ -126,3 +126,11 @@ Repo-specific helpers for those steps:
 - Points far from a card's centre swing back in depth (the card faces the camera): props drawn at the card edge can sink into nearby
   geometry. Place loose props with onCard at the same canvas point (small fwd) so drawn tip and prop meet.
 - 940 frames at 2K = 4 chunks x ~40 min with jobs=1. To redo one chunk, delete its seg_*.mp4(.done) + status.txt and rerun final.sh.
+
+## Gotchas (from the butter short)
+- ElevenLabs can run out of quota (401 `quota_exceeded`, not a rotated key): fall back to free local Kokoro (`pipeline/voice/kokoro_voice.py
+  lines.json <day>/voice bm_george 1.1`, model files in /root/tts from the kokoro-onnx GitHub release, then `align.py` for words.json) and a
+  synthesized score (copy `stories/butter/music_butter.py`); push-notify the owner to top up. Higgsfield credits are not needed for TikTok prep.
+- Portrait framing of a bench: a camera level with the bench sees mostly the bench skirt. Look down at ~1.2 m with fov 31-38.
+- Small white-tipped hand props read as cigarettes; smoke puffs near a laughing mouth read as smoking. Chunky props, smoke to the side.
+- Hook text must be gone before the white flash frame (HOOK_END = FLASH_AT - 8).
