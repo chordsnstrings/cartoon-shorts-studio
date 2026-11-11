@@ -278,9 +278,9 @@ export const makeKei = () => {
   for (const z of [-0.8, 0.8]) { const m = new THREE.Mesh(new THREE.BoxGeometry(0.05, 0.16, 0.1), dark); m.position.set(1.7, 1.25, z); g.add(m); }
   // steering wheel on the RIGHT (local +z), facing the driver
   const sw = new THREE.Group();
-  const ring = new THREE.Mesh(new THREE.TorusGeometry(0.19, 0.032, 8, 28), black); ring.castShadow = true;
+  const ring = new THREE.Mesh(new THREE.TorusGeometry(0.17, 0.03, 8, 28), black); ring.castShadow = true;
   const col = new THREE.Mesh(new THREE.CylinderGeometry(0.025, 0.025, 0.2, 8).rotateX(Math.PI / 2).translate(0, 0, -0.1), black);
-  sw.add(ring, col); sw.position.set(1.36, 1.2, 0.2); sw.rotation.set(0, Math.PI / 2, 0); sw.rotateX(-0.45); g.add(sw);
+  sw.add(ring, col); sw.position.set(1.4, 1.0, 0.33); sw.rotation.set(0, Math.PI / 2, 0); sw.rotateX(-0.75); g.add(sw); // low and flat: the rim stays below the chin in close-ups
   // left door (local -z): hinged at its front edge x 1.62
   const door = new THREE.Group(); door.position.set(1.62, 0, -0.75);
   addParts(door, [[bx(-0.77, 0.44, -0.03, 0, 1.1, 0.0), body], [bx(-0.77, 1.1, -0.03, -0.7, 1.74, 0.0), body], [bx(-0.77, 1.7, -0.03, 0, 1.76, 0.0), body], [bx(-0.5, 0.86, -0.06, -0.38, 0.9, -0.03), dark]]);

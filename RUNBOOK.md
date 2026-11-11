@@ -153,3 +153,5 @@ Repo-specific helpers for those steps:
 - A covered object under a dust sheet reads as a ghost unless its wheels/bumper peek out: lift the sheet ~0.35 m.
 - Soft white puffs on a dark stage read as bokeh/balloons; dust needs grey-brown opaque blobs. Wavy "air" lines at chin height read as smoke/breath.
 - Cars passing behind a hero prop are only on screen ~1 s at 20 m/s: aim the camera along the road and schedule one car per second.
+- A steering wheel beside a seated driver card crosses the cheek in side close-ups (reads as a hand/phone at the face): mount it low and flat
+  (rim top below the chin, ~1.15 m) and keep it on the card's own z so the card covers it.
