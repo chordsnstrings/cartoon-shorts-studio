@@ -8,6 +8,7 @@ import { FloppyShort, FLOPPY_FRAMES } from "./videos/floppy/Short";
 import { TidyShort, TIDY_FRAMES } from "./videos/tidy/Short";
 import { ButterShort, BUTTER_FRAMES } from "./videos/butter/Short";
 import { DroneShort, DRONE_FRAMES } from "./videos/drone/Short";
+import { KeiShort, KEI_FRAMES } from "./videos/kei/Short";
 export const RemotionRoot: React.FC = () => (
   <>
     <Composition id="HotpotShort" component={HotpotShort} durationInFrames={HOTPOT_FRAMES} fps={30} width={1080} height={1920} />
@@ -17,6 +18,7 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="TidyShort" component={TidyShort} durationInFrames={TIDY_FRAMES} fps={30} width={1080} height={1920} />
     <Composition id="ButterShort" component={ButterShort} durationInFrames={BUTTER_FRAMES} fps={30} width={1080} height={1920} />
     <Composition id="DroneShort" component={DroneShort} durationInFrames={DRONE_FRAMES} fps={30} width={1080} height={1920} />
+    <Composition id="KeiShort" component={KeiShort} durationInFrames={KEI_FRAMES} fps={30} width={1080} height={1920} />
     <Composition id="FinnishShort" component={FinnishShort} durationInFrames={FINNISH_FRAMES} fps={30} width={1080} height={1920} />
   </>
 );

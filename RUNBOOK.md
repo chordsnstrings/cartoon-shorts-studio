@@ -143,3 +143,13 @@ Repo-specific helpers for those steps:
 - Diagonal red "no" slashes near a hand read as a stick/weapon; keep icons clear of hands.
 - A camera that should follow a fast prop: compute the look target from droneAt(id, t) inside the CAMS key (mix 0.88 prop / 0.12 subject).
 - ElevenLabs had quota again on 2026-11-10 (voice + music_v1 plan both fine); `user/subscription` needs a permission the key lacks - just try TTS.
+
+## Gotchas (from the kei short)
+- Vehicles: build cabs with open window frames (no glass) so a seated driver card reads; seat the card ~0.5 m (sit-mode hip) and keep the
+  face in the window band (y 1.1-1.75). A waving hand above ~1.7 m hides under the roof.
+- Golden BACKLIGHT turns a pale body colour into the violet shade colour (mint read as a blue truck = "a different vehicle"): for a hero
+  vehicle at sunset put the sun to the side (sunAz ~160) so its faces stay warm-lit.
+- Right/left-hand-drive beats only read from BEHIND the vehicle (screen right = vehicle right); front views mirror it.
+- A covered object under a dust sheet reads as a ghost unless its wheels/bumper peek out: lift the sheet ~0.35 m.
+- Soft white puffs on a dark stage read as bokeh/balloons; dust needs grey-brown opaque blobs. Wavy "air" lines at chin height read as smoke/breath.
+- Cars passing behind a hero prop are only on screen ~1 s at 20 m/s: aim the camera along the road and schedule one car per second.

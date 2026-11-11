@@ -1,0 +1,64 @@
+# Cues
+
+LUFS mix -15.0, TP -1.2 dBTP, voice -16.3
+
+-   0.000  f   0  BIG PICKUP ROAR pass
+-   0.000  f   0  bed road
+-   0.000  f   0  kei putter
+-   0.150  f   4  big horn
+-   0.250  f   8  whoosh
+-   3.300  f  99  bed road
+-   3.980  f 119  DIAL boing
+-   4.080  f 122  needle stop clink
+-   5.350  f 160  to flash
+-   5.667  f 170  bed road
+-   5.950  f 178  tiny squeak
+-   6.190  f 186  TAPE ratchet
+-   7.370  f 221  tape snap
+-   8.360  f 251  half boing
+-  10.000  f 300  bed road
+-  10.570  f 317  question bloop
+-  11.590  f 348  MEEP
+-  11.810  f 354  meep
+-  12.267  f 368  bed road
+-  12.860  f 386  shrug
+-  14.900  f 447  bed road
+-  15.280  f 458  STICKER SLAP
+-  15.700  f 471  car pass
+-  16.200  f 486  car pass
+-  16.350  f 491  idle
+-  16.367  f 491  bed busy
+-  16.700  f 501  car pass
+-  17.230  f 517  big pickup pass
+-  17.650  f 530  car pass
+-  18.100  f 543  car pass
+-  18.330  f 550  sad slide
+-  18.800  f 564  car pass
+-  19.200  f 576  car pass
+-  19.550  f 586  car pass
+-  20.533  f 616  bed road
+-  20.920  f 628  BALE thump
+-  21.180  f 635  BALE thump
+-  21.580  f 647  BALE thump
+-  21.920  f 658  BALE thump
+-  22.600  f 678  rev
+-  22.667  f 680  bed road
+-  22.720  f 682  bump
+-  22.800  f 684  mud splat
+-  23.200  f 696  bump
+-  24.000  f 720  AC breeze
+-  24.000  f 720  bed road
+-  24.570  f 737  cool sparkle
+-  25.333  f 760  bed show
+-  25.400  f 762  creak
+-  26.490  f 795  SHEET YANK
+-  26.740  f 802  dust poof
+-  27.810  f 834  drumroll
+-  29.190  f 876  SPOT CLUNK
+-  29.260  f 878  ta-da
+-  29.310  f 879  confetti pops
+-  29.360  f 881  applause
+-  30.450  f 914  end putter
+-  30.467  f 914  bed evening
+-  30.610  f 918  toot
+-  32.960  f 989  FAST ROAR

@@ -1,0 +1,11 @@
+{"length_s": 35.33, "model_id": "music_v1",
+ "global": ["instrumental", "playful cartoon comedy score", "country road flavour", "banjo, ukulele, tuba, pizzicato strings, light brushed drums, toy horn", "no vocals"],
+ "sections": [
+  {"name": "hook", "s": 0, "e": 5.65, "style": "zippy country chase: fast banjo and slap bass, a big truck zooming by, cheeky, ends on a comic brass sting"},
+  {"name": "tiny", "s": 5.65, "e": 10.0, "style": "small and cute: plucky ukulele and toy glockenspiel tiptoe, a tuba answers low and big"},
+  {"name": "wheel", "s": 10.0, "e": 12.25, "style": "curious question: pizzicato and a sly clarinet, a surprised little honk at the end"},
+  {"name": "slow", "s": 12.25, "e": 20.55, "style": "slow lazy shuffle: tuba and brushed drums at walking pace, a sad trombone slide, deadpan"},
+  {"name": "hauls", "s": 20.55, "e": 25.35, "style": "proud bouncy country stomp, banjo and handclaps, building up, then a cool breezy shimmer"},
+  {"name": "revival", "s": 25.35, "e": 30.45, "style": "dusty music box creak, then a grand drumroll into a bright brass fanfare reveal"},
+  {"name": "ending", "s": 30.45, "e": 35.33, "style": "warm sunset country outro, gentle banjo and whistle melody, playful button at the end"}
+ ]}
