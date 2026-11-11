@@ -134,3 +134,12 @@ Repo-specific helpers for those steps:
 - Portrait framing of a bench: a camera level with the bench sees mostly the bench skirt. Look down at ~1.2 m with fov 31-38.
 - Small white-tipped hand props read as cigarettes; smoke puffs near a laughing mouth read as smoking. Chunky props, smoke to the side.
 - Hook text must be gone before the white flash frame (HOOK_END = FLASH_AT - 8).
+
+## Gotchas (from the drone short)
+- A small 3D hero prop (the drone) reads at phone size only at ~0.5 m across within ~3 m of the lens; scale it per shot (1.3-2.6) rather than
+  building it life-size. In a CU of a character, keep any prop/fx >= 150 px (1080) clear of the head or it reads as poking/stabbing.
+- Projection check for "X finds Y" shots: a prop on nearly the same camera ray as a face sits ON the face. Keep the angle between them >= 10 deg.
+- Wall-mounted boxes (cupboards) read as floating TVs/billboards at night; drop them from night shots.
+- Diagonal red "no" slashes near a hand read as a stick/weapon; keep icons clear of hands.
+- A camera that should follow a fast prop: compute the look target from droneAt(id, t) inside the CAMS key (mix 0.88 prop / 0.12 subject).
+- ElevenLabs had quota again on 2026-11-10 (voice + music_v1 plan both fine); `user/subscription` needs a permission the key lacks - just try TTS.

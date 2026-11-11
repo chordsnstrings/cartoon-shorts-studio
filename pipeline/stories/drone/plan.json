@@ -1,0 +1,11 @@
+{"length_s": 34.0, "model_id": "music_v1",
+ "global": ["instrumental", "playful cartoon comedy score", "buzzy gadget flavour", "pizzicato strings, marimba, toy synth bleeps, light brushed drums", "no vocals"],
+ "sections": [
+  {"name": "hook", "s": 0, "e": 4.45, "style": "zippy buzzing synth and fast pizzicato, a gadget zooming around, cheeky and loud, ends on a brass sting"},
+  {"name": "keynote", "s": 4.45, "e": 9.8, "style": "grand mock-heroic keynote fanfare, bright brass and timpani, big promise"},
+  {"name": "waiting", "s": 9.8, "e": 15.1, "style": "slow deflated tuba and ticking clock woodblock, long wait, then a sudden bright ta-da of arrival"},
+  {"name": "carry", "s": 15.1, "e": 18.6, "style": "gentle tiptoe marimba walk, curious bleeps"},
+  {"name": "night", "s": 18.6, "e": 23.4, "style": "sleepy music box lullaby, then an alarm-like staccato and a fast whooshing chase"},
+  {"name": "charger", "s": 23.4, "e": 29.4, "style": "deadpan comic plunks, patient tick tock, a deflating slide whistle drop and soft thud"},
+  {"name": "ending", "s": 29.4, "e": 34.0, "style": "warm playful upbeat outro, glockenspiel and bouncy bass, tiny comic button at the end"}
+ ]}

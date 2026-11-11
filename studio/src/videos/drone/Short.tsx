@@ -1,0 +1,127 @@
+// "The Flying Security Camera That Took Six Years" (post chain from the bridge / hot pot shorts): our original 34 s short in the flat-characters-in-a-3D-toon-world style.
+// One three.js world (world.ts) posed per frame from the story timeline (story.ts). Post chain (look-match pass):
+//   InkPass (world ink lines, own pass) -> lens blur pre + main (thin-lens DOF per shot from dofAt) ->
+//   [bloom (emissive only) + NEUTRAL tone mapping + colour grade] (one merged EffectPass), MSAA 4.
+// Ink runs before the DOF so lines blur with what they belong to; bloom after the DOF so glows defocus with their
+// source; the grade is display-referred, so it comes after tone mapping. Every pixel-sized parameter is specified at
+// 1080x1920 and scaled with the output size, so stills at --scale 0.5 and the 1440x2560 final match.
+// Place changes crossfade by stacking a second canvas for the fade frames; the hook ends on a 4-frame white flash.
+import React, { useEffect, useMemo } from "react";
+import * as THREE from "three";
+import { AbsoluteFill, getInputProps, useCurrentFrame } from "remotion";
+import { ThreeCanvas } from "@remotion/three";
+import { useThree } from "@react-three/fiber";
+import { EffectComposer } from "@react-three/postprocessing";
+import { BlendFunction, BloomEffect, ToneMappingEffect, ToneMappingMode } from "postprocessing";
+import { World } from "./world";
+import { InkPass, noInkFallback } from "./ink";
+import { LensBlur, GrainEffect } from "./lensblur";
+import { GradeEffect, GRADES, GRADE_STRENGTH, gradeFor } from "./grade";
+import { TOTAL, FLASH_AT, SHOTS, layersAt, dofAt } from "./story";
+
+export const DRONE_FRAMES = TOTAL;
+
+/** A/B switches for test stills only (Remotion inputProps `{ post: { ink: false, ... } }`); everything is on by default. */
+type PostToggles = { ink: boolean; lens: boolean; pre: boolean; bloom: boolean; grade: boolean; grain: boolean };
+const toggles = (): PostToggles => ({ ink: true, lens: true, pre: true, bloom: true, grade: true, grain: false, ...((getInputProps() as { post?: Partial<PostToggles> }).post ?? {}) });
+
+/** Bloom for emissive sources only (depth.md 6.4). Its MIP chain always starts at 540x960 (half of 1080x1920),
+ *  whatever the output size, so the glow keeps the same size relative to the frame (e-fold ~30 px at 1080p,
+ *  ~1.5 % of the frame height) at 540, 1080 and 1440 widths. ADD blend: HDR-safe (SCREEN darkens values > 1). */
+const makeBloom = () => {
+  const b = new BloomEffect({ blendFunction: BlendFunction.ADD, intensity: 0.5, luminanceThreshold: 1.0, luminanceSmoothing: 0.2, mipmapBlur: true, levels: 6, radius: 0.6 });
+  const mip = b.mipmapBlurPass;
+  const setSize = mip.setSize.bind(mip);
+  mip.setSize = (w: number, h: number) => setSize(Math.round((1920 * w) / Math.max(h, 1)), 1920);
+  return b;
+};
+
+const fwd = new THREE.Vector3(), fpt = new THREE.Vector3();
+
+
+const Inner: React.FC<{ id: number }> = ({ id }) => {
+  const f = useCurrentFrame();
+  const { camera, scene } = useThree();
+  const world = useMemo(() => new World(), []);
+  const target = useMemo(() => new THREE.Vector3(), []);
+  const on = useMemo(toggles, []);
+  const fx = useMemo(() => ({
+    ink: new InkPass(scene, camera as THREE.PerspectiveCamera),
+    lens: new LensBlur({ maxCoC: 24, nearScale: 1.2 }),
+    bloom: makeBloom(),
+    tone: new ToneMappingEffect({ mode: ToneMappingMode.NEUTRAL }),
+    grade: new GradeEffect(GRADES.day, GRADE_STRENGTH.day),
+    grain: new GrainEffect({ amount: 0.025, cellPx: 1.5 }), // film grain, OFF by default (inputProps post.grain): the reference measures no grain and it quadruples the file size
+  }), [camera, scene]);
+  useEffect(() => () => { const d = (fx.ink as unknown as { dispose?: () => void }).dispose; if (typeof d === "function") d.call(fx.ink); }, [fx]);
+  const post = useMemo(() => (
+    <EffectComposer multisampling={msaa()}>
+      {on.ink ? <primitive object={fx.ink} dispose={null} /> : <></>}
+      {on.lens && on.pre ? <primitive object={fx.lens.pre} dispose={null} /> : <></>}
+      {on.lens ? <primitive object={fx.lens.main} dispose={null} /> : <></>}
+      {on.bloom ? <primitive object={fx.bloom} dispose={null} /> : <></>}
+      <primitive object={fx.tone} dispose={null} />
+      {on.grade ? <primitive object={fx.grade} dispose={null} /> : <></>}
+      {on.grain ? <primitive object={fx.grain} dispose={null} /> : <></>}
+    </EffectComposer>
+  ), [fx, on]);
+  const cam = camera as THREE.PerspectiveCamera;
+  target.copy(world.update(id, f, cam, scene));
+  noInkFallback(world.root);
+  // thin-lens focus: distance along the view axis to the shot's focus point (default: the camera's look target)
+  const d = dofAt(f);
+  cam.getWorldDirection(fwd);
+  if (d.focus) fpt.set(...d.focus(f)); else fpt.copy(target);
+  fx.lens.focus = Math.max(0.3, fpt.sub(cam.position).dot(fwd));
+  fx.lens.cInf = d.cInf;
+  gradeFor(fx.grade, SHOTS[id - 1].light);
+  fx.grain.seed = f; // deterministic per frame
+  return (
+    <>
+      <primitive object={world.root} dispose={null} />
+      {post}
+    </>
+  );
+};
+
+/** test stills only: inputProps `{ post: { dpr: 0.5 } }` forces the WebGL buffer size (R3F clamps dpr to >= 1 by default) */
+const msaa = () => (getInputProps() as { post?: { msaa?: number } }).post?.msaa ?? 2;
+const dprOverride = () => (getInputProps() as { post?: { dpr?: number } }).post?.dpr;
+const ShotView: React.FC<{ id: number; alpha: number }> = ({ id, alpha }) => (
+  <AbsoluteFill style={{ opacity: alpha }}>
+    <ThreeCanvas width={1080} height={1920} {...(dprOverride() ? { dpr: dprOverride() } : {})} shadows gl={{ antialias: false, stencil: false, powerPreference: "high-performance", toneMappingExposure: 1.0 }}
+      camera={{ fov: 40, near: 0.03, far: 1500 }}>
+      <Inner id={id} />
+    </ThreeCanvas>
+  </AbsoluteFill>
+);
+
+/** burned-in hook text from frame 1 (2026-11-08 analytics override): big, bold, top third, held ~3 s, then a quick fade.
+ *  Sizes are relative to the frame height so the 1080 stills and the 1440 final match. */
+const HOOK = ["This camera FLIES", "around your house \u{1F633}"];
+const HOOK_END = FLASH_AT - 12;
+const HookText: React.FC<{ f: number }> = ({ f }) => {
+  if (f >= HOOK_END + 8) return null;
+  const a = f < HOOK_END ? 1 : 1 - (f - HOOK_END) / 8, pop = f < 4 ? 0.92 + 0.02 * f : 1;
+  return (
+    <AbsoluteFill style={{ alignItems: "center", justifyContent: "flex-start", paddingTop: "15.5%", opacity: a }}>
+      <div style={{ transform: `scale(${pop})`, textAlign: "center", fontFamily: "Poppins, 'Noto Color Emoji', sans-serif", fontWeight: 700,
+        fontSize: "4.9vh", lineHeight: 1.12, color: "#ffffff", WebkitTextStroke: "0.75vh #241726", paintOrder: "stroke fill",
+        textShadow: "0 0.5vh 0 #241726", letterSpacing: "-0.02em", width: "96%" }}>
+        {HOOK.map((l, i) => <div key={i} style={{ color: i === 1 ? "#ffd84a" : "#ffffff" }}>{l}</div>)}
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+export const DroneShort: React.FC = () => {
+  const f = useCurrentFrame();
+  const flash = f >= FLASH_AT && f < FLASH_AT + 4 ? [1, 0.75, 0.45, 0.2][f - FLASH_AT] : 0;
+  return (
+    <AbsoluteFill style={{ background: "#e9dcc0" }}>
+      {layersAt(f).map((l, i) => <ShotView key={i ? "over" : "base"} id={l.id} alpha={l.alpha} />)}
+      {flash > 0 && <AbsoluteFill style={{ background: "#ffffff", opacity: flash }} />}
+      <HookText f={f} />
+    </AbsoluteFill>
+  );
+};

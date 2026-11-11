@@ -1,0 +1,45 @@
+# Cues
+
+LUFS mix -15.0, TP -1.2 dBTP, voice -15.9
+
+-   0.000  f   0  ROTOR buzz orbit
+-   0.000  f   0  bed home
+-   4.000  f 120  zoom whoosh to lens
+-   4.467  f 134  bed stage
+-   4.500  f 135  applause
+-   4.500  f 135  stage hover hum
+-   6.960  f 209  COINS
+-   8.610  f 258  box sparkle
+-   9.733  f 292  bed home
+-   9.800  f 294  pages
+-   9.800  f 294  tick
+-  11.800  f 354  bed home
+-  11.850  f 356  doorbell
+-  13.060  f 392  BOX POP
+-  13.090  f 393  rotor up
+-  14.170  f 425  COINS 2
+-  15.100  f 453  bed hall
+-  15.250  f 458  stair step
+-  15.600  f 468  scan bleep
+-  18.600  f 558  bed night
+-  18.800  f 564  sleep whirr
+-  20.420  f 613  ALARM
+-  20.500  f 615  wake bloop
+-  21.130  f 634  rotor spin-up
+-  21.300  f 639  bed night
+-  21.300  f 639  fridge hum
+-  22.050  f 662  ZOOM whoosh
+-  22.650  f 680  caught boing
+-  23.400  f 702  bed home
+-  23.620  f 709  hop buzz
+-  24.780  f 743  DOCK clunk
+-  24.850  f 746  fast clock
+-  25.000  f 750  charge bleep
+-  26.333  f 790  bed home
+-  26.400  f 792  hover buzz
+-  27.420  f 823  WIFI DROP blip
+-  28.300  f 849  spin down
+-  28.700  f 861  CUSHION THUMP
+-  29.400  f 882  bed home
+-  29.450  f 884  end hover
+-  31.510  f 945  send ding
