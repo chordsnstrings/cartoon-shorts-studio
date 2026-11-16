@@ -1,0 +1,11 @@
+{"length_s": 34.33, "model_id": "music_v1",
+ "global": ["instrumental", "playful cartoon comedy score", "space adventure flavour", "pizzicato strings, bouncy synth bass, glockenspiel, brass stabs, timpani, light drums", "no vocals"],
+ "sections": [
+  {"name": "hook", "s": 0, "e": 4.0, "style": "big triumphant cartoon brass fanfare with timpani, a heavy clank hit, cheeky and amazed"},
+  {"name": "launch", "s": 4.0, "e": 10.33, "style": "dusky anticipation: low strings pulsing, a countdown tick, then a huge rising orchestral swell and rumbling liftoff"},
+  {"name": "orbit", "s": 10.33, "e": 15.0, "style": "floaty and fast: twinkly glockenspiel and synth arpeggios whirling around, light and wondrous"},
+  {"name": "return", "s": 15.0, "e": 19.17, "style": "tense descent: tremolo strings, a whoosh, three rising stabs building suspense"},
+  {"name": "catch", "s": 19.17, "e": 23.7, "style": "a clamp hit then a joyful celebration: brass and drums, cheering energy, bright and bouncy"},
+  {"name": "twist", "s": 23.7, "e": 28.67, "style": "deadpan comic: sneaky pizzicato bassoon, slowing down, a deflating trombone, ends on a cartoon boom"},
+  {"name": "ending", "s": 28.67, "e": 34.33, "style": "warm playful outro, bouncy pizzicato and glockenspiel melody, cheeky button ending"}
+ ]}

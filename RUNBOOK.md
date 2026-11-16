@@ -155,3 +155,15 @@ Repo-specific helpers for those steps:
 - Cars passing behind a hero prop are only on screen ~1 s at 20 m/s: aim the camera along the road and schedule one car per second.
 - A steering wheel beside a seated driver card crosses the cheek in side close-ups (reads as a hand/phone at the face): mount it low and flat
   (rim top below the chin, ~1.15 m) and keep it on the card's own z so the card covers it.
+
+## Gotchas (from the catch short)
+- `pipeline/voice/align.py voice.wav words.json` OVERWRITES words.json with whisper's words ("41", misspellings): copy words.json first, or
+  merge whisper timings back onto the script words (word counts matched 83/83).
+- pushK creeps along pos->look: a far look target (the tower 90 m away) flew the camera 5-10 m through the foreground cast. Use story.ts
+  `aim(pos, target, d)` (look point 5-9 m out) in every shot with near characters.
+- Front cards can't face away: for "watching something" put the cast 2-4 m in front of the lens along the view ray, facing +-1, look/headTilt up.
+- Big vehicles + people in one portrait frame: lens ~0.6 m high, cast at 2.4-3.4 m, target 90 m out, fov 58 -> faces in the lower third, the
+  event in the middle; hook text stays clear above it.
+- Verifier flags: an impact star where an arm meets a ship = "hit"; a tilted low angle of a ship + tower = disaster echo (use a calm level
+  wide); a dark smoke blob = real explosion (cartoon poof + sparkles + cream puffs over visible water); grid fins read as solar panels unless small/dark.
+- A 1030-frame space/sky short rendered in ~50 min (4 chunks, jobs=1) - big empty skies are cheap.
