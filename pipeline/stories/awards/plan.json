@@ -1,0 +1,11 @@
+{"length_s": 33.33, "model_id": "music_v1",
+ "global": ["instrumental", "playful cartoon comedy score", "awards-show glitz", "funky bass, brass stabs, glockenspiel, pizzicato strings, light drums, synth pops", "no vocals"],
+ "sections": [
+  {"name": "hook", "s": 0, "e": 4.45, "style": "glitzy pop-show groove with a robotic synth lead, cheeky and bouncy, ends on a cymbal crash"},
+  {"name": "carpet", "s": 4.45, "e": 10.95, "style": "red-carpet swagger: strutting funk bass, camera-click percussion, then a stuck, wobbling deadpan stop"},
+  {"name": "announcer", "s": 10.95, "e": 14.05, "style": "comic chaos: blaring muted trumpets talking over each other, clumsy and loud"},
+  {"name": "waiting", "s": 14.05, "e": 18.15, "style": "slow ticking elevator-music waiting, a clock tick, sleepy bassoon, drowsy"},
+  {"name": "trailer", "s": 18.15, "e": 22.8, "style": "epic movie-trailer drums building dramatically, then a sudden record-scratch stop and a silly tuba"},
+  {"name": "winner", "s": 22.8, "e": 28.1, "style": "triumphant awards fanfare: brass, timpani, three rising hits, then a confetti celebration"},
+  {"name": "ending", "s": 28.1, "e": 33.33, "style": "warm playful outro, bouncy pizzicato and glockenspiel, cheeky button ending"}
+ ]}
