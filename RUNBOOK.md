@@ -167,3 +167,11 @@ Repo-specific helpers for those steps:
 - Verifier flags: an impact star where an arm meets a ship = "hit"; a tilted low angle of a ship + tower = disaster echo (use a calm level
   wide); a dark smoke blob = real explosion (cartoon poof + sparkles + cream puffs over visible water); grid fins read as solar panels unless small/dark.
 - A 1030-frame space/sky short rendered in ~50 min (4 chunks, jobs=1) - big empty skies are cheap.
+
+## Gotchas (from the awards short)
+- Long tool sleeps (>~9 min) can get the whole session's processes killed, setsid render included: poll with `sleep 290` and restart
+  final.sh if `pgrep -fa final.sh` is empty (it resumes from .done chunks; a killed chunk restarts from frame 0 of that chunk).
+- Higgsfield upload_url signs `if-none-match`: the curl PUT needs `-H "If-None-Match: *"` as well as Content-Type.
+- A handheld mic near the face + an arm looping up past the neck read as "clutching her throat": hold props out at chest height.
+- Wide portrait shots of a 16:9 stage screen leave the lower half as empty floor: fill it with audience-head cards or go low (y ~1.1).
+- Theatre look: redefine the `night` preset as a show light (warm key, violet shade) instead of adding a new light name (grade/cast use the names).
