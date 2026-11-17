@@ -11,6 +11,7 @@ import { DroneShort, DRONE_FRAMES } from "./videos/drone/Short";
 import { KeiShort, KEI_FRAMES } from "./videos/kei/Short";
 import { CatchShort, CATCH_FRAMES } from "./videos/catch/Short";
 import { AwardsShort, AWARDS_FRAMES } from "./videos/awards/Short";
+import { OutageShort, OUTAGE_FRAMES } from "./videos/outage/Short";
 export const RemotionRoot: React.FC = () => (
   <>
     <Composition id="HotpotShort" component={HotpotShort} durationInFrames={HOTPOT_FRAMES} fps={30} width={1080} height={1920} />
@@ -23,6 +24,7 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="KeiShort" component={KeiShort} durationInFrames={KEI_FRAMES} fps={30} width={1080} height={1920} />
     <Composition id="CatchShort" component={CatchShort} durationInFrames={CATCH_FRAMES} fps={30} width={1080} height={1920} />
     <Composition id="AwardsShort" component={AwardsShort} durationInFrames={AWARDS_FRAMES} fps={30} width={1080} height={1920} />
+    <Composition id="OutageShort" component={OutageShort} durationInFrames={OUTAGE_FRAMES} fps={30} width={1080} height={1920} />
     <Composition id="FinnishShort" component={FinnishShort} durationInFrames={FINNISH_FRAMES} fps={30} width={1080} height={1920} />
   </>
 );

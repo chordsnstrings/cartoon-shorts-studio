@@ -1,0 +1,11 @@
+{"length_s": 28.33, "model_id": "music_v1",
+ "global": ["instrumental", "playful cartoon comedy score", "tech glitch comedy", "bouncy synth bass, pizzicato strings, glockenspiel, muted trumpet, light drums, bit-crushed blips", "no vocals"],
+ "sections": [
+  {"name": "hook", "s": 0, "e": 4.25, "style": "bright cheerful shop jingle that suddenly glitches, stutters and powers down with a descending synth slide, ends on a crash"},
+  {"name": "services", "s": 4.25, "e": 9.15, "style": "fast frantic comic chase: staccato pizzicato, bleepy error blips, tumbling xylophone runs, three quick stops"},
+  {"name": "activate", "s": 9.15, "e": 13.35, "style": "deadpan pause: lonely plucked bass notes, a sad trombone wah at the end"},
+  {"name": "stores", "s": 13.35, "e": 15.95, "style": "silly waddling tuba and clarinet, comic shrug"},
+  {"name": "status", "s": 15.95, "e": 18.15, "style": "ironically calm lounge elevator music, soft vibraphone, everything is fine"},
+  {"name": "update", "s": 18.15, "e": 22.35, "style": "suspicious sneaky detective pizzicato building to a reveal hit, then a comic oops sting"},
+  {"name": "ending", "s": 22.35, "e": 28.33, "style": "warm bouncy playful outro, glockenspiel and pizzicato, cheeky button ending"}
+ ]}

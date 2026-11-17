@@ -175,3 +175,12 @@ Repo-specific helpers for those steps:
 - A handheld mic near the face + an arm looping up past the neck read as "clutching her throat": hold props out at chest height.
 - Wide portrait shots of a 16:9 stage screen leave the lower half as empty floor: fill it with audience-head cards or go low (y ~1.1).
 - Theatre look: redefine the `night` preset as a show light (warm key, violet shade) instead of adding a new light name (grade/cast use the names).
+
+## Gotchas (from the outage short)
+- A pop-up "X" icon placed on a 3D prop (card reader) can line up with a face behind it from the shot camera: anchor reaction icons to the
+  held phone card (phoneAt() returns its world point) or check the projection against every head.
+- Horizontal half-width of a portrait frame is small (fov 42 at 3.5 m = +-0.78 m): fx drifting "up and away" sideways leave the frame in
+  half a second; drift mostly up.
+- Small props on a display table hide behind the display phones on their stands: put hero props in the gaps between PHONE_SPOTS.
+- Shared stills + final render on 2 CPUs: run stills before starting final.sh (each still ~10 s after a ~2 min bundle).
+- Cartoon 'poof' clouds over machines (server racks) read as smoke/fire to the verifier: use sparks + red LEDs only.
