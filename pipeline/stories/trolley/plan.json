@@ -1,0 +1,10 @@
+{"length_s": 32.17, "model_id": "music_v1",
+ "global": ["instrumental", "playful cartoon comedy score", "slapstick city comedy", "pizzicato strings, tuba, clarinet, glockenspiel, light jazz drums, woodblock", "no vocals"],
+ "sections": [
+  {"name": "hook", "s": 0, "e": 4.0, "style": "panicked comic crash: frantic pizzicato run, a big cymbal crash and glass-like glockenspiel shatter, then a held suspense tremolo"},
+  {"name": "cruise", "s": 4.0, "e": 10.75, "style": "breezy sunny city jazz, cheerful walking bass and clarinet, confident and smooth, then an abrupt halt"},
+  {"name": "alarm", "s": 10.75, "e": 16.35, "style": "tense ticking clock, alarm-like ding-ding glockenspiel, then deadpan sneaky tiptoe pizzicato"},
+  {"name": "reverse", "s": 16.35, "e": 21.8, "style": "silly slow-motion backing-up tuba steps that build, then a slapstick crash hit with cymbal and broken glass sparkle"},
+  {"name": "aftermath", "s": 21.8, "e": 27.05, "style": "relieved calm sigh, then curious investigating bassoon and pizzicato detective line"},
+  {"name": "ending", "s": 27.05, "e": 32.17, "style": "warm bouncy playful outro, glockenspiel and pizzicato, cheeky button ending"}
+ ]}

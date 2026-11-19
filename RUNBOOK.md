@@ -184,3 +184,12 @@ Repo-specific helpers for those steps:
 - Small props on a display table hide behind the display phones on their stands: put hero props in the gaps between PHONE_SPOTS.
 - Shared stills + final render on 2 CPUs: run stills before starting final.sh (each still ~10 s after a ~2 min bundle).
 - Cartoon 'poof' clouds over machines (server racks) read as smoke/fire to the verifier: use sparks + red LEDs only.
+
+## Gotchas (from the trolley short)
+- Golden light turns a WHITE hero car violet whenever the sun is behind it: white vehicles -> "day" light (sunAz ~115) for every shot.
+- quad() normals follow (b-a)x(d-a): a single-sided pane (rear glass) built in the wrong order is invisible from outside; set DoubleSide on glass.
+- Random dark crack strokes on road textures read as garbled/mirrored letters to the verifier: no squiggles on asphalt.
+- A gate arm pushed by a car: compute the swing from the car's NEAR corner, not its centre line, or the arm clips through the body.
+- Portrait framing with characters + a car: raise the lens (~3 m) and put the cast 2-3 m in front of it so faces sit in the lower third and
+  the car in the middle; at eye height the cast covers the car. Near-side buildings start at z 4.5: keep cameras out of them (all-violet frame).
+- A long tool sleep plus a session restart killed the setsid render: just rerun final.sh (it resumes from .done chunks).
