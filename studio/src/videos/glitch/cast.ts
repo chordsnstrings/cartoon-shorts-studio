@@ -324,7 +324,7 @@ const shots = (cam: CamInfo, out: Stage, id: number, t: number) => {
     standing(cam, out, 2, PAL, HOOK_PAL[0], HOOK_PAL[1], t, { expr: two ? "laugh" : "shock", look: -0.6, headTilt: 5, reach: two ? [[160, 300], [440, 300]] : [[230, 400], [370, 400]] });
     burstAt(out, "hb", t, -0.2, -2.2, 1.0, -1.6, 1.6);
     const v = vehPoses(1, t);
-    burstAt(out, "hb2", t, W.trucks - 0.1, -17, 0.8, -5.2, 2.2);
+    burstAt(out, "hb2", t, W.trucks - 0.1, -24, 0.8, -5.2, 2.6);
     if (v.A.vis) pixels(out, t, v.A.x + 1.5, v.A.y + 2.6, v.A.z + 1.4, 1.4, 1);
     if (at(t, W.trucks)) pixels(out, t, v.B.x - 1.0, v.B.y + 3.0, v.B.z + 1.4, 1.4, 3);
   }

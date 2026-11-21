@@ -55,8 +55,8 @@ const C_V = 9;
 export const vehPoses = (id: number, t: number) => {
   const out = { A: HIDE, B: HIDE, C: HIDE, car: HIDE, car2: HIDE };
   if (id === 1) {
-    out.A = fly(t, HOOK_T0, HOOK_P0, [-6.0, 9.5, 0.5], 6, 4.5, 1.4, Math.PI);
-    out.B = fly(t, W.trucks - 0.1, [-17, 0, LANE_F], [-1.5, 9.5, 0.6], 6, -3.2, 0.9, Math.PI);
+    out.A = fly(t, HOOK_T0, HOOK_P0, [-4.6, 9.5, 0.4], 4.3, 3.6, 1.1, Math.PI);
+    out.B = fly(t, W.trucks - 0.1, [-24, 0, LANE_F], [-1.0, 11, 0.8], 6, -3.2, 0.9, Math.PI);
     out.car = P(-0.4, LANE_N, Math.PI, 0, 0, 0, t < 0.4 ? 0.06 * Math.exp(-t * 6) * Math.sin(t * 30) : 0);
   }
   if (id === 2) {
@@ -170,8 +170,8 @@ export const END_HERO: [number, number] = [0.05, 2.4], END_PAL: [number, number]
 const CAMS: Record<number, Key[]> = {
   1: [
     // low on the near sidewalk looking up the street: the two friends gasp in the lower half, the trucks tumble through the sky
-    { f: 0, s: (f) => AD([4.5, 1.3, 3.8], [-9, 6.2, -2], pushK(f, 0, 0.0022, 0.006, 30), { fov: 60, roll: 0.04 }, 6) },
-    { f: F(2.6), dur: 36, s: (f) => AD([4.6, 1.3, 3.9], [-10, 5.4, -2.6], pushK(f, F(2.6), 0.0025, 0.007, 25), { fov: 60, roll: -0.03 }, 6) },
+    { f: 0, s: (f) => AD([4.5, 1.3, 3.8], [-9, 6.2, -2], pushK(f, 0, 0.0009), { fov: 60, roll: 0.04 }, 6) },
+    { f: F(2.6), dur: 36, s: (f) => AD([4.6, 1.3, 3.9], [-10, 5.4, -2.6], pushK(f, 0, 0.0009) * pushK(f, F(2.6), 0.0009, 0.004, 20), { fov: 60, roll: -0.03 }, 6) },
   ],
   2: [
     // high over the sunny street: launch day, fireworks over the rooftops

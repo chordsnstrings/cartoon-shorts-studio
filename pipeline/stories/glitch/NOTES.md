@@ -12,4 +12,4 @@
   head (moved left); cut figures at edges reframed.
 - Audio: ElevenLabs George 34.4 s; ElevenLabs music_v1 plan (plan.json); mix_glitch.py (8-bit glitch blips, boings, whooshes, fireworks,
   crowd applause, record-stop, boat jitter rattle, stepped sink beeps, drumroll, trophy ding).
-- Render: scripts/final.sh GlitchShort glitch 1050 5 1.
+- Render: scripts/final.sh GlitchShort glitch 1050 5 1 (~25-30 min per 210-frame chunk); hook chunk re-rendered after a frame check (truck A landed too early, push crept too close). QA: no black/white/frozen frames, pops only on planned cuts; -15 LUFS. Final Opus audit: PASS (cover moved to f40 so the flying truck shows).
