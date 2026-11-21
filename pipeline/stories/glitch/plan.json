@@ -1,0 +1,10 @@
+{"length_s": 35.2, "model_id": "music_v1",
+ "global": ["instrumental", "playful cartoon comedy score", "video-game flavoured comedy", "pizzicato strings, chiptune square-wave lead, tuba, glockenspiel, light funky drums, woodblock", "no vocals"],
+ "sections": [
+  {"name": "hook", "s": 0, "e": 4.6, "style": "comic chaos: a springy boing launch, rising slide-whistle, a big cymbal crash, frantic chiptune arpeggio"},
+  {"name": "launch", "s": 4.6, "e": 12.4, "style": "triumphant celebration: bright brass fanfare mixed with an 8-bit victory melody, confident marching drums, sparkling glockenspiel"},
+  {"name": "played", "s": 12.4, "e": 14.6, "style": "everything stops: a short comic suspense pause, single plucked note, tiptoe pizzicato"},
+  {"name": "glitch", "s": 14.6, "e": 24.6, "style": "wobbly glitchy slapstick: bouncy tuba, stuttering chiptune notes that skip and repeat, warbly pitch bends, comic boings and spooky theremin-like wobble"},
+  {"name": "score", "s": 24.6, "e": 29.4, "style": "deadpan beat then a proud mock-heroic fanfare swell with timpani and an 8-bit victory jingle"},
+  {"name": "ending", "s": 29.4, "e": 35.2, "style": "warm bouncy playful outro, glockenspiel and pizzicato with a chiptune twinkle, cheeky button ending"}
+ ]}

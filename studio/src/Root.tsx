@@ -13,6 +13,7 @@ import { CatchShort, CATCH_FRAMES } from "./videos/catch/Short";
 import { AwardsShort, AWARDS_FRAMES } from "./videos/awards/Short";
 import { OutageShort, OUTAGE_FRAMES } from "./videos/outage/Short";
 import { TrolleyShort, TROLLEY_FRAMES } from "./videos/trolley/Short";
+import { GlitchShort, GLITCH_FRAMES } from "./videos/glitch/Short";
 export const RemotionRoot: React.FC = () => (
   <>
     <Composition id="HotpotShort" component={HotpotShort} durationInFrames={HOTPOT_FRAMES} fps={30} width={1080} height={1920} />
@@ -27,6 +28,7 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="AwardsShort" component={AwardsShort} durationInFrames={AWARDS_FRAMES} fps={30} width={1080} height={1920} />
     <Composition id="OutageShort" component={OutageShort} durationInFrames={OUTAGE_FRAMES} fps={30} width={1080} height={1920} />
     <Composition id="TrolleyShort" component={TrolleyShort} durationInFrames={TROLLEY_FRAMES} fps={30} width={1080} height={1920} />
+    <Composition id="GlitchShort" component={GlitchShort} durationInFrames={GLITCH_FRAMES} fps={30} width={1080} height={1920} />
     <Composition id="FinnishShort" component={FinnishShort} durationInFrames={FINNISH_FRAMES} fps={30} width={1080} height={1920} />
   </>
 );

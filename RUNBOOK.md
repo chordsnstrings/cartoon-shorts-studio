@@ -193,3 +193,12 @@ Repo-specific helpers for those steps:
 - Portrait framing with characters + a car: raise the lens (~3 m) and put the cast 2-3 m in front of it so faces sit in the lower third and
   the car in the middle; at eye height the cast covers the car. Near-side buildings start at z 4.5: keep cameras out of them (all-violet frame).
 - A long tool sleep plus a session restart killed the setsid render: just rerun final.sh (it resumes from .done chunks).
+
+## Gotchas (from the glitch short)
+- Bash tool calls time out at 2 min by default: start stills/renders with `setsid nohup ... &` and poll with an explicit timeout.
+- A camera above a sidewalk at roof height sits INSIDE the near blocks (z 4.5..18.5): put high establishing cameras over the road (z ~ -3).
+- A character sinking into the ground: a lone head on asphalt reads as a severed head. Stop at the shoulders with arms flailing up out of a
+  dark crack ring (flat fx decal), then drop out of sight in 0.15 s.
+- A small boat seen from a quay at eye height is just a cabin roof: give it a coloured hull + mast/flag and look down from ~4.5 m.
+- Thin dark firework rays read as cracks/spiders: big multicolour dot bursts at 17 m card size, low over the street (y 16-24).
+- faster-whisper's av can't open our wavs (metadata_errors TypeError): load with soundfile, resample to 16 kHz, pass the array.
