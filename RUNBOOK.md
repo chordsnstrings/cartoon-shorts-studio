@@ -202,3 +202,13 @@ Repo-specific helpers for those steps:
 - A small boat seen from a quay at eye height is just a cabin roof: give it a coloured hull + mast/flag and look down from ~4.5 m.
 - Thin dark firework rays read as cracks/spiders: big multicolour dot bursts at 17 m card size, low over the street (y 16-24).
 - faster-whisper's av can't open our wavs (metadata_errors TypeError): load with soundfile, resample to 16 kHz, pass the array.
+
+## Gotchas (from the mirror short)
+- Shop fronts / building faces at z +-4: a street camera must stay at |z| < ~3.7 or it sits behind the front (whole frame = plywood/wall).
+- Portrait half-width is tiny: at fov 46 a card 3-4 m off the view axis at 6 m depth is out of frame. Place side characters by
+  `cam + fwd*depth + right*lateral` with lateral/depth <= ~0.15 (fov 46) instead of guessing world x/z; check with a still.
+- Two characters on nearly the same camera ray read as one (yellow body under a white head): split them left/right of the hero.
+- Props pinned on a facade (note, frame) beat props held at the hands: a frame held at chest height covered the face.
+- eleven_v3 at SPEED 1.1 runs ~2.65 words/s including pauses: budget <= 90 words for a 33-34 s short (110 words came out 41.5 s).
+- Glyph "weird address" signs: zigzags read as W/M, keyholes as i: use spirals, stars, hearts, dot clusters, rings, triangles only.
+- The mousetrap emoji (U+1FAA4) renders as a brown blob at hook-text size; prefer common emoji.

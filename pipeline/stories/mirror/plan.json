@@ -1,0 +1,10 @@
+{"length_s": 34.0, "model_id": "music_v1",
+ "global": ["instrumental", "playful cartoon comedy score", "sneaky caper comedy", "pizzicato strings, bassoon, muted trumpet, glockenspiel, light brushed drums, woodblock, a little synth bleep", "no vocals"],
+ "sections": [
+  {"name": "hook", "s": 0, "e": 4.25, "style": "comic tension then snap: tiptoe pizzicato, a ratchet, a sudden big comic hit and cymbal, bouncy brass sting"},
+  {"name": "fakeweb", "s": 4.25, "e": 8.55, "style": "bright cheerful showtune bounce, glockenspiel and pizzicato, a jaunty welcome-to-town feel"},
+  {"name": "traps", "s": 8.55, "e": 18.5, "style": "sneaky heist comedy: tiptoeing bassoon and pizzicato, muted trumpet, finger snaps, mischievous and quiet"},
+  {"name": "suspicious", "s": 18.5, "e": 23.5, "style": "comic suspense: a single held low note, slow suspicious bass walk, a raised-eyebrow woodblock"},
+  {"name": "deeper", "s": 23.5, "e": 28.4, "style": "frantic comic scramble, quick bouncy tuba and pizzicato runs, slide whistle"},
+  {"name": "ending", "s": 28.4, "e": 34.0, "style": "warm bouncy playful outro, glockenspiel and pizzicato with a cheeky synth bleep, button ending"}
+ ]}
