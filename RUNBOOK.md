@@ -220,3 +220,13 @@ Repo-specific helpers for those steps:
 - Speed-camera / box props need a face card nudged off the box toward the camera (the lens faces traffic, the camera sees the back).
 - A pothole with a blue puddle reads as an eye; a red box with two reels reads as a gift box: give a hero prop its defining feature (lens, rim).
 - Portrait insert of a landscape touchscreen: keep the key content (our car) at u 0.55-0.65, and keep pushK small or it slides off frame.
+
+## Gotchas (from the mercury short)
+- Planet-scale scenes: a sphere's limb sits acos(R/(R+h)) below the horizon. With the camera ~5 m above a 40 m planet the planet is out of
+  frame; use R ~120 with the hero ~4 m above the surface, and cartoon-scale the probe card (scale ~22) for the whole-planet wides.
+- Orbits in portrait: make them polar (plane contains y) and open the plane ~30 deg toward the lens, so rings read as tall ellipses that fit.
+- A lone hero card in front of a planet's horizon reads as "sitting on the ground" (verifier: crash-landing): frame it against stars.
+- Grey cratered sphere with bright ray craters reads as the Moon; striped cream sphere reads as Jupiter: warm Mercury, soft Venus.
+- The drawn satellite (sat.ts) works as any spacecraft character: `nozzle` + `chips: -1` options; flame = a camera-facing fx card below
+  the nozzle exit (design y 826).
+- Space + one small room render fast: 1000 frames at 2K = 4 chunks x ~10 min (jobs=1).

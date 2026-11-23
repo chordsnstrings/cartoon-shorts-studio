@@ -1,0 +1,12 @@
+{"length_s": 33.33, "model_id": "music_v1",
+ "global": ["instrumental", "playful cartoon comedy score", "space adventure flavour", "pizzicato strings, bouncy synth bass, glockenspiel, brass stabs, timpani, light drums", "no vocals"],
+ "sections": [
+  {"name": "hook", "s": 0, "e": 4.47, "style": "bold cartoon space fanfare that sputters and stalls, a comic brass 'uh-oh' drop, cheeky and surprised"},
+  {"name": "sun", "s": 4.47, "e": 8.7, "style": "hot and fast: urgent pulsing strings and synth bass speeding up, rising tension, whooshing"},
+  {"name": "flybys", "s": 8.7, "e": 12.8, "style": "bouncy slingshot: playful glockenspiel arpeggios swooping up and down, wondrous and light"},
+  {"name": "burn", "s": 12.8, "e": 17.9, "style": "nail-biting suspense: tremolo strings and ticking percussion building, then a sudden cut-off and a deflating trombone"},
+  {"name": "bug", "s": 17.9, "e": 19.9, "style": "deadpan comic pause: sneaky pizzicato bassoon, sparse"},
+  {"name": "luckily", "s": 19.9, "e": 24.9, "style": "relieved warm celebration: bright brass and glockenspiel, gentle triumph"},
+  {"name": "twist", "s": 24.9, "e": 27.6, "style": "deadpan comic: wobbly tuba and slide whistle going up, a shrug"},
+  {"name": "ending", "s": 27.6, "e": 33.33, "style": "warm playful outro, bouncy pizzicato and glockenspiel melody, cheeky button ending"}
+ ]}
