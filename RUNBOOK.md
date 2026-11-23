@@ -212,3 +212,11 @@ Repo-specific helpers for those steps:
 - eleven_v3 at SPEED 1.1 runs ~2.65 words/s including pauses: budget <= 90 words for a 33-34 s short (110 words came out 41.5 s).
 - Glyph "weird address" signs: zigzags read as W/M, keyholes as i: use spirals, stars, hearts, dot clusters, rings, triangles only.
 - The mousetrap emoji (U+1FAA4) renders as a brown blob at hook-text size; prefer common emoji.
+
+## Gotchas (from the reality short)
+- Interior shots of makeRobo: the lower body is a SOLID box (top at y 0.98), so the cabin is a flat deck; a camera behind the rear bench
+  (x < -0.9) sits inside the bench back (whole lower frame one colour). Ride at x ~ -0.7, y ~ 1.22, between the seats (z ~ 0.1), fov 62-68.
+- Raised-arm `reach` targets on SEATED cards draw long arcs past the head: verifier read them as a strap round the neck. No raised arms in cars.
+- Speed-camera / box props need a face card nudged off the box toward the camera (the lens faces traffic, the camera sees the back).
+- A pothole with a blue puddle reads as an eye; a red box with two reels reads as a gift box: give a hero prop its defining feature (lens, rim).
+- Portrait insert of a landscape touchscreen: keep the key content (our car) at u 0.55-0.65, and keep pushK small or it slides off frame.

@@ -1,0 +1,11 @@
+{"length_s": 32.2, "model_id": "music_v1",
+ "global": ["instrumental", "playful cartoon comedy score", "upbeat retro video-game flavour", "chiptune arpeggios, pizzicato strings, light funk drums, synth bass, glockenspiel", "no vocals"],
+ "sections": [
+  {"name": "hook", "s": 0, "e": 4.1, "style": "bright 8-bit power-up fanfare with a rising arpeggio and a cymbal swell, wow moment"},
+  {"name": "launch", "s": 4.1, "e": 8.5, "style": "cheerful bouncy driving groove, synth bass and pizzicato, a download-chime sparkle at the end"},
+  {"name": "gameview", "s": 8.5, "e": 13.5, "style": "dreamy curious video-game menu music, shimmering arpeggios, magical sparkle"},
+  {"name": "careful", "s": 13.5, "e": 17.5, "style": "sneaky careful tiptoe pizzicato, a little swerve whoop, then a polite slowing-down ritardando"},
+  {"name": "override", "s": 17.5, "e": 22.7, "style": "cheeky fast racing chiptune, two quick whoosh hits, then a deadpan stop and awkward silence-like sustain"},
+  {"name": "claim", "s": 22.7, "e": 27.4, "style": "grand mock-triumphant brass fanfare that deflates into a comic sad trombone and curious bassoon"},
+  {"name": "ending", "s": 27.4, "e": 32.2, "style": "warm bouncy playful outro, chiptune and glockenspiel, cheeky button ending"}
+ ]}

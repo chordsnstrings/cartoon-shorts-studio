@@ -15,6 +15,7 @@ import { OutageShort, OUTAGE_FRAMES } from "./videos/outage/Short";
 import { TrolleyShort, TROLLEY_FRAMES } from "./videos/trolley/Short";
 import { GlitchShort, GLITCH_FRAMES } from "./videos/glitch/Short";
 import { MirrorShort, MIRROR_FRAMES } from "./videos/mirror/Short";
+import { RealityShort, REALITY_FRAMES } from "./videos/reality/Short";
 export const RemotionRoot: React.FC = () => (
   <>
     <Composition id="HotpotShort" component={HotpotShort} durationInFrames={HOTPOT_FRAMES} fps={30} width={1080} height={1920} />
@@ -31,6 +32,7 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="TrolleyShort" component={TrolleyShort} durationInFrames={TROLLEY_FRAMES} fps={30} width={1080} height={1920} />
     <Composition id="GlitchShort" component={GlitchShort} durationInFrames={GLITCH_FRAMES} fps={30} width={1080} height={1920} />
     <Composition id="MirrorShort" component={MirrorShort} durationInFrames={MIRROR_FRAMES} fps={30} width={1080} height={1920} />
+    <Composition id="RealityShort" component={RealityShort} durationInFrames={REALITY_FRAMES} fps={30} width={1080} height={1920} />
     <Composition id="FinnishShort" component={FinnishShort} durationInFrames={FINNISH_FRAMES} fps={30} width={1080} height={1920} />
   </>
 );
