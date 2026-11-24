@@ -230,3 +230,13 @@ Repo-specific helpers for those steps:
 - The drawn satellite (sat.ts) works as any spacecraft character: `nozzle` + `chips: -1` options; flame = a camera-facing fx card below
   the nozzle exit (design y 826).
 - Space + one small room render fast: 1000 frames at 2K = 4 chunks x ~10 min (jobs=1).
+
+## Gotchas (from the delivery short)
+- Yard reuse: `studio/src/videos/delivery` has `buildYard` (houses, detached garage, poles, live windows), a big delivery hexacopter (drone3d.ts)
+  and live hanging cables (world.ts `Cable`, snag/wobble). Utility poles stand on the sidewalk (z 8.4): lawn cameras at z < 8 or a pole fills the frame.
+- A hook camera aimed at a far target with pushK creeps ~1 m toward the near character (head crop by 3 s): aim the look point ~4 m out.
+- Two-shots in portrait: place the cast with story.ts `placeAt(pos, look, fov, depth, nx)` (nx ±0.5) instead of world guesses; a camera that
+  follows a moving prop slides the cast off-frame, so mix the prop into the look by <= 0.25.
+- Verifier reads: a zig-zag bulb filament = the letter "M"; a ribbon cross + bow = a wrapped present (gift card = flat card, chip + star);
+  lit windows need a warm emissive >= 1.5 to read "on" in daylight, "off" = near-black glass.
+- Exterior yard at 2K: ~15 min per 262-frame chunk (jobs=1).

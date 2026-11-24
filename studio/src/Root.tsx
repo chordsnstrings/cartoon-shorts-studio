@@ -17,6 +17,7 @@ import { GlitchShort, GLITCH_FRAMES } from "./videos/glitch/Short";
 import { MirrorShort, MIRROR_FRAMES } from "./videos/mirror/Short";
 import { RealityShort, REALITY_FRAMES } from "./videos/reality/Short";
 import { MercuryShort, MERCURY_FRAMES } from "./videos/mercury/Short";
+import { DeliveryShort, DELIVERY_FRAMES } from "./videos/delivery/Short";
 export const RemotionRoot: React.FC = () => (
   <>
     <Composition id="HotpotShort" component={HotpotShort} durationInFrames={HOTPOT_FRAMES} fps={30} width={1080} height={1920} />
@@ -35,6 +36,7 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="MirrorShort" component={MirrorShort} durationInFrames={MIRROR_FRAMES} fps={30} width={1080} height={1920} />
     <Composition id="RealityShort" component={RealityShort} durationInFrames={REALITY_FRAMES} fps={30} width={1080} height={1920} />
     <Composition id="MercuryShort" component={MercuryShort} durationInFrames={MERCURY_FRAMES} fps={30} width={1080} height={1920} />
+    <Composition id="DeliveryShort" component={DeliveryShort} durationInFrames={DELIVERY_FRAMES} fps={30} width={1080} height={1920} />
     <Composition id="FinnishShort" component={FinnishShort} durationInFrames={FINNISH_FRAMES} fps={30} width={1080} height={1920} />
   </>
 );

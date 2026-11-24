@@ -1,0 +1,48 @@
+# Cues
+
+LUFS mix -15.0, TP -1.2 dBTP, voice -16.3
+
+-   0.000  f   0  WOBBLY ROTOR
+-   0.000  f   0  bed day
+-   3.000  f  90  ZAP power line
+-   3.020  f  91  fall whoosh
+-   3.460  f 104  CRASH roof
+-   3.960  f 119  dizzy tweet
+-   5.300  f 159  bed day
+-   7.060  f 212  card pop
+-   7.090  f 213  APP ding
+-   7.890  f 237  drone icon bloop
+-   8.000  f 240  countdown tick
+-   8.433  f 253  bed day
+-   8.450  f 253  ROTOR arrive
+-  10.550  f 316  release click
+-  10.830  f 325  ta-da
+-  11.050  f 331  PARCEL thump
+-  11.600  f 348  bed day
+-  11.600  f 348  rotor leave
+-  13.170  f 395  CABLE TWANG
+-  13.170  f 395  wobble rotor
+-  14.250  f 428  PROP POP
+-  14.270  f 428  prop whoosh
+-  14.933  f 448  bed day
+-  14.950  f 448  FLAP ROTOR
+-  16.060  f 482  sick warble
+-  19.100  f 573  ZAP 2
+-  19.550  f 586  CRASH 2
+-  19.867  f 596  bed day
+-  21.680  f 650  POWER CLUNK
+-  21.700  f 651  power down
+-  22.000  f 660  bed day
+-  22.120  f 664  check ding
+-  23.000  f 690  bed night
+-  23.050  f 692  fast clock
+-  23.200  f 696  ladder creak
+-  25.267  f 758  bed day
+-  25.660  f 770  card pop
+-  25.730  f 772  COINS
+-  27.300  f 819  bed day
+-  27.600  f 828  pen ticks
+-  28.190  f 846  question pop
+-  28.850  f 866  magnify bloop
+-  29.933  f 898  bed day
+-  32.240  f 967  send ding

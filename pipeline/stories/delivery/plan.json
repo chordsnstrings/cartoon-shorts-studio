@@ -1,0 +1,10 @@
+{"length_s": 34.9, "model_id": "music_v1",
+ "global": ["instrumental", "playful cartoon comedy score", "suburban sitcom flavour", "pizzicato strings, bouncy bass, glockenspiel, kazoo-like woodwinds, brass stabs, light drums", "no vocals"],
+ "sections": [
+  {"name": "hook", "s": 0, "e": 5.3, "style": "cheerful delivery fanfare that suddenly wobbles and falls apart, comic brass crash and a sliding trombone 'uh-oh'"},
+  {"name": "order", "s": 5.3, "e": 11.5, "style": "bright bouncy suburban morning: pizzicato and glockenspiel, ticking clock feel, ends on a happy ding"},
+  {"name": "wobble", "s": 11.5, "e": 19.9, "style": "comic chaos: wobbly clarinet and tuba, slide whistles, stumbling rhythm, a flapping silly bird feel, building to a crash"},
+  {"name": "lightsout", "s": 19.9, "e": 25.2, "style": "deadpan comic pause: sparse sneaky pizzicato bassoon, a few plucks, dry and quiet"},
+  {"name": "giftcard", "s": 25.2, "e": 30.0, "style": "amused and cheeky: bouncy pizzicato with a little detective-style walking bass"},
+  {"name": "ending", "s": 30.0, "e": 34.9, "style": "warm playful outro, bouncy pizzicato and glockenspiel melody, cheeky button ending"}
+ ]}
