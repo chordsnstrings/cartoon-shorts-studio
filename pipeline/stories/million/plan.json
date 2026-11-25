@@ -1,0 +1,12 @@
+{"length_s": 31.0, "model_id": "music_v1",
+ "global": ["instrumental", "playful cartoon comedy score", "starry night and space wonder flavour", "pizzicato strings, glockenspiel, celesta, bouncy synth bass, brass stabs, light drums", "no vocals"],
+ "sections": [
+  {"name": "hook", "s": 0, "e": 4.7, "style": "big surprised cartoon fanfare with a rising swarm of twinkling glockenspiel notes, cheeky and astonished"},
+  {"name": "few", "s": 4.7, "e": 7.7, "style": "light sparse pizzicato, calm small and orderly, a few twinkles"},
+  {"name": "computer", "s": 7.7, "e": 11.65, "style": "wondrous bright celesta and synth arpeggios, sunny and clever, gentle bleeps"},
+  {"name": "swarm", "s": 11.65, "e": 15.7, "style": "busy and crowded: fast buzzing strings and stacked glockenspiel runs building, comic overload"},
+  {"name": "astronomers", "s": 15.7, "e": 19.1, "style": "worried: minor-key woodwinds and soft tremolo strings, a sad little oboe"},
+  {"name": "regulators", "s": 19.1, "e": 22.1, "style": "deadpan comic pause: sneaky bassoon and pizzicato, a dry shrug"},
+  {"name": "dead", "s": 22.1, "e": 25.6, "style": "playful mock-funeral: wobbly tuba and slide whistle drifting down, silly"},
+  {"name": "ending", "s": 25.6, "e": 31.0, "style": "warm playful outro, twinkling glockenspiel melody over bouncy pizzicato, cheeky button ending"}
+ ]}

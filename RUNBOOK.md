@@ -240,3 +240,16 @@ Repo-specific helpers for those steps:
 - Verifier reads: a zig-zag bulb filament = the letter "M"; a ribbon cross + bow = a wrapped present (gift card = flat card, chip + star);
   lit windows need a warm emissive >= 1.5 to read "on" in daylight, "off" = near-black glass.
 - Exterior yard at 2K: ~15 min per 262-frame chunk (jobs=1).
+
+## Gotchas (from the million short)
+- Night-sky reuse: `studio/src/videos/million` has `buildHill` (hilltop + 3D telescope), satellite trains (`skyTrains`, HDR fx cards rotated
+  to screen motion: pass `up`/`fwd` in CamInfo), an eyepiece view (ring card 0.6 m in front of the lens: size the hole to the frame WIDTH,
+  a hole bigger than the frame is invisible), an instanced Earth swarm (`swarmN`) and `earthHD`.
+- A planet's additive atmosphere shell must stay below the hero's altitude, or a CU fills with pale blue (hero 11 m above a 120 m Earth, shell 1.03 R).
+- Seated cards: `reach` targets sit much lower than for standing ones (y ~745 = chest out wide). y 560-650 put the hands at/above the head:
+  read as "hooray" or "hands on head", not a shrug.
+- Grey hair over a bald-looking forehead + a grey moustache read as a blindfold + gag: give older characters dark/solid hair, no moustache.
+- A seated character under a wall screen: a camera ~1.9 m high looking slightly down keeps his head below the screen content; a low lens
+  stacks the head over the screen centre and shows a lavender floor.
+- ElevenLabs music plan sections are min 3 s: merge or stretch shorter beats before sending.
+- Space + night hill + one room: ~5-8 min per 233-frame chunk at 2K (jobs=1).
