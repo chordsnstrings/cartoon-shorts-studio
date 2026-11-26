@@ -19,6 +19,7 @@ import { RealityShort, REALITY_FRAMES } from "./videos/reality/Short";
 import { MercuryShort, MERCURY_FRAMES } from "./videos/mercury/Short";
 import { DeliveryShort, DELIVERY_FRAMES } from "./videos/delivery/Short";
 import { MillionShort, MILLION_FRAMES } from "./videos/million/Short";
+import { MarketShort, MARKET_FRAMES } from "./videos/market/Short";
 export const RemotionRoot: React.FC = () => (
   <>
     <Composition id="HotpotShort" component={HotpotShort} durationInFrames={HOTPOT_FRAMES} fps={30} width={1080} height={1920} />
@@ -39,6 +40,7 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="MercuryShort" component={MercuryShort} durationInFrames={MERCURY_FRAMES} fps={30} width={1080} height={1920} />
     <Composition id="DeliveryShort" component={DeliveryShort} durationInFrames={DELIVERY_FRAMES} fps={30} width={1080} height={1920} />
     <Composition id="MillionShort" component={MillionShort} durationInFrames={MILLION_FRAMES} fps={30} width={1080} height={1920} />
+    <Composition id="MarketShort" component={MarketShort} durationInFrames={MARKET_FRAMES} fps={30} width={1080} height={1920} />
     <Composition id="FinnishShort" component={FinnishShort} durationInFrames={FINNISH_FRAMES} fps={30} width={1080} height={1920} />
   </>
 );

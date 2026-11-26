@@ -1,0 +1,42 @@
+# Cues
+
+LUFS mix -15.0, TP -1.2 dBTP, voice -16.5
+
+-   0.000  f   0  empty shed room tone + tube hum
+-   1.100  f  33  drip plink
+-   3.320  f 100  gasp boing
+-   3.600  f 108  drip plink
+-   4.720  f 142  BIG plink
+-   4.750  f 142  to flash
+-   5.133  f 154  happy crowd murmur
+-   5.150  f 154  sleigh bells
+-   6.080  f 182  fairy-light sparkle
+-   8.560  f 257  cheer
+-   9.267  f 278  empty shed room tone + tube hum
+-   9.460  f 284  bubble pop
+-  10.110  f 303  huts tick in
+-  10.620  f 319  fifty ding
+-  12.000  f 360  crowd fills in
+-  13.520  f 406  cha-ching
+-  14.100  f 423  empty shed room tone + tube hum
+-  14.880  f 446  count pings
+-  17.100  f 513  empty shed room tone + tube hum
+-  18.660  f 560  drip plink
+-  20.133  f 604  empty shed room tone + tube hum
+-  20.890  f 627  banner shimmer
+-  21.530  f 646  glitch static
+-  21.560  f 647  glitch zaps
+-  21.660  f 650  chip power-up
+-  22.200  f 666  empty shed room tone + tube hum
+-  23.620  f 709  shutter rattle
+-  23.840  f 715  shutter SLAM
+-  24.200  f 726  shutter SLAM
+-  24.800  f 744  shutter SLAM
+-  25.733  f 772  empty shed room tone + tube hum
+-  26.540  f 796  shrug boing
+-  28.030  f 841  head plink
+-  28.040  f 841  head splat
+-  28.700  f 861  empty shed room tone + tube hum
+-  28.790  f 864  question pop
+-  29.960  f 899  poster sparkle
+-  30.950  f 928  send chime

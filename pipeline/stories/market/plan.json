@@ -1,0 +1,13 @@
+{"length_s": 33.6, "model_id": "music_v1",
+ "global": ["instrumental", "playful cartoon comedy score", "Christmas flavour", "sleigh bells, glockenspiel, celesta, pizzicato strings, bouncy tuba, light drums", "no vocals"],
+ "sections": [
+  {"name": "hook", "s": 0, "e": 5.15, "style": "a sparkly Christmas fanfare that deflates into a sad wobbly tuba and a comic record-scratch-like stop, disappointed and funny"},
+  {"name": "dream", "s": 5.15, "e": 9.25, "style": "lush magical Christmas wonderland: sleigh bells, soaring celesta and glockenspiel, warm strings, twinkling and over-the-top perfect"},
+  {"name": "promise", "s": 9.25, "e": 14.1, "style": "bouncy optimistic sales-pitch march with sleigh bells, building and counting up, cheeky brass stabs"},
+  {"name": "count", "s": 14.1, "e": 17.1, "style": "sparse and empty: a lonely plucked melody, five slow pizzicato notes, echoing, deflated"},
+  {"name": "drips", "s": 17.1, "e": 20.15, "style": "deadpan comic: plinking glockenspiel drip notes over a slow sad bassoon"},
+  {"name": "reveal", "s": 20.15, "e": 23.2, "style": "mysterious hush then a glitchy digital sparkle reveal, synth arpeggio wobble, sneaky"},
+  {"name": "cancel", "s": 23.2, "e": 26.2, "style": "comic collapse: three heavy brass hits in a row then a sad trombone slide"},
+  {"name": "lesson", "s": 26.2, "e": 29.2, "style": "dry shrug: sleepy tuba and pizzicato, a sigh, gentle and deadpan"},
+  {"name": "ending", "s": 29.2, "e": 33.6, "style": "cheeky warm Christmas outro with sleigh bells and glockenspiel melody, playful button ending"}
+ ]}

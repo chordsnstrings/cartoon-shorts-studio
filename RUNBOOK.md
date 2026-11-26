@@ -253,3 +253,15 @@ Repo-specific helpers for those steps:
   stacks the head over the screen centre and shows a lavender floor.
 - ElevenLabs music plan sections are min 3 s: merge or stretch shorter beats before sending.
 - Space + night hill + one room: ~5-8 min per 233-frame chunk at 2K (jobs=1).
+
+## Gotchas (from the market short)
+- Reuse: `studio/src/videos/market` has `buildHall` (bare warehouse interior), `buildDream` (snowy twilight market + big tree), `hut()`
+  (market chalet, bare or dream) with roll-down shutters, instanced twinkling fairy-light bulbs, falling-snow Points, and a real generated
+  image as an in-world banner (Image + delayRender, as catch/orbit do for their Earth maps).
+- Real-gravity drips (9.8 m/s^2) are on screen 3-4 frames and never show in stills: use a soft cartoon fall (story.ts `dropY`).
+- A splash crown drawn inside a bucket reads as teeth; on a head, a lingering white splat + spiral eyes reads as an ice pack / injury.
+  Use jumping droplets + a ring, a transient splat and a deadpan face.
+- Snow Points with sizeAttenuation become a giant white disc within ~1 m of the lens: keep the volume >= 2 m ahead of every camera.
+- A character standing between the lens and far pow/impact fx will line one up with his head somewhere in the shot (reads as a hit):
+  give the impact beat to the props alone, or keep >= 10 deg between head and every fx.
+- Fronts of huts that face across a portrait aisle are seen at 60-70 deg from the aisle: give shutters a contrasting colour and big pows.
