@@ -1,0 +1,10 @@
+{"length_s": 33.6, "model_id": "music_v1",
+ "global": ["instrumental", "playful cartoon comedy score", "heroic rescue-team flavour", "pizzicato strings, bouncy bass, glockenspiel, brass stabs, snare, light timpani", "no vocals"],
+ "sections": [
+  {"name": "hook", "s": 0, "e": 3.8, "style": "bold heroic brass fanfare with timpani, triumphant entrance, big cymbal swell"},
+  {"name": "coat", "s": 3.8, "e": 10.4, "style": "curious sparkling wonder: glockenspiel and pizzicato, a little rocket-launch whoosh build, ends bright"},
+  {"name": "test", "s": 10.4, "e": 19.0, "style": "brave determined march: snare, bouncy tuba and brass, rising tension, tiptoe up the stairs, ends on a proud hit"},
+  {"name": "inside", "s": 19.0, "e": 22.3, "style": "sudden hush: soft cool celesta and airy strings, calm and cosy, then a comic dry stop"},
+  {"name": "feet", "s": 22.3, "e": 27.9, "style": "comic panic: frantic hot-foot pizzicato, slide whistles, kazoo-like woodwinds, hopping rhythm, ending with a cheerful ding"},
+  {"name": "ending", "s": 27.9, "e": 33.6, "style": "warm playful outro, bouncy pizzicato and glockenspiel melody, little heroic brass button ending"}
+ ]}

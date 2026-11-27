@@ -1,0 +1,42 @@
+# Cues
+
+LUFS mix -15.0, TP -1.2 dBTP, voice -16.5
+
+-   0.000  f   0  fire roar + crackle bed
+-   0.000  f   0  robot steps
+-   0.200  f   6  servo
+-   3.210  f  96  hero sparkle
+-   3.500  f 105  to flash
+-   3.733  f 112  fire roar + crackle bed
+-   5.000  f 150  coat shimmer
+-   6.090  f 183  gauge pop
+-   6.390  f 192  pinch squeak
+-   8.090  f 243  rocket launch roar
+-   8.140  f 244  rocket whoosh
+-  10.450  f 314  robot steps
+-  10.467  f 314  fire roar + crackle bed
+-  10.900  f 327  tablet beep
+-  12.940  f 388  nervous boing
+-  13.620  f 409  fast clock
+-  14.800  f 444  fire roar + crackle bed
+-  15.300  f 459  robot steps
+-  16.360  f 491  alert ding
+-  17.630  f 529  report chirps
+-  19.100  f 573  fire roar + crackle bed
+-  19.200  f 576  hot sizzle
+-  20.220  f 607  cool chime
+-  21.640  f 649  record scratch
+-  21.667  f 650  fire roar + crackle bed
+-  22.950  f 688  feet whoomp
+-  23.000  f 690  robot steps
+-  24.210  f 726  hot-foot boing
+-  25.750  f 772  hose spray
+-  25.930  f 778  steam hiss
+-  26.267  f 788  fire roar + crackle bed
+-  27.220  f 817  new-feet sparkle
+-  27.320  f 820  tap
+-  27.460  f 824  feet ding
+-  28.200  f 846  fire roar + crackle bed
+-  28.290  f 849  question pop
+-  30.580  f 917  antenna wag
+-  30.600  f 918  send chime

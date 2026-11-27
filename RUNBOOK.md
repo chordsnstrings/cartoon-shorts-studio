@@ -265,3 +265,14 @@ Repo-specific helpers for those steps:
 - A character standing between the lens and far pow/impact fx will line one up with his head somewhere in the shot (reads as a hit):
   give the impact beat to the props alone, or keep >= 10 deg between head and every fx.
 - Fronts of huts that face across a portrait aisle are seen at 60-70 deg from the aisle: give shutters a contrasting colour and big pows.
+
+## Gotchas (from the firedog short)
+- Reuse: `studio/src/videos/firedog` has `dog3d.ts` (quadruped robot dog, IK legs, trot from distance travelled, stairs slope, taps,
+  `feet[]`/`headPos` world points), world.ts `Flames` (HDR camera-facing flame cards that bloom), `buildFireYard` (burn tower with a
+  real doorway, fire station, fire engine) + `buildStairwell`, toon hat "helmet".
+- To show a 3D animal/vehicle's face in a 3/4 view: yaw = (angle from the subject to the camera) +- ~0.9 rad; + puts the nose screen-right.
+- Never glide between two cameras on opposite sides of the cast: the path flies through a character card (whole frame = a shirt). Cut.
+- A dog walking on stairs modelled as a slope plane sinks into the steps (legs read "broken"): lift it ~half a riser and shorten the stride.
+- Flames ON a body part must be small and rise from it, never cover it: a covered dark foot inside a flame cone read as a bomb / burnt hole.
+- Overlay icons (signal waves, ?) never in front of flames: they vanish; put them on wall or sky.
+- A yard + stairwell short renders ~10-12 min per 168-frame chunk at 2K (6 chunks, jobs=1).
